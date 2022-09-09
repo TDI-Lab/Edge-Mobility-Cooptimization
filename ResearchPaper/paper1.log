@@ -1,0 +1,929 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.12.23)  7 SEP 2022 11:28
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**paper1.tex
+(./paper1.tex
+LaTeX2e <2020-02-02> patch level 5
+L3 programming layer <2020-03-06>
+(c:/texlive/2020/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
+(c:/texlive/2020/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+)
+\c@part=\count167
+\c@section=\count168
+\c@subsection=\count169
+\c@subsubsection=\count170
+\c@paragraph=\count171
+\c@subparagraph=\count172
+\c@figure=\count173
+\c@table=\count174
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen134
+)
+(c:/texlive/2020/texmf-dist/tex/latex/cite/cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 332.
+Package: cite 2015/02/27  v 5.5
+)
+(c:/texlive/2020/texmf-dist/tex/latex/lipsum/lipsum.sty
+(c:/texlive/2020/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2020-03-06 L3 programming layer (loader) 
+
+(c:/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count175
+\l__pdf_internal_box=\box45
+))
+(c:/texlive/2020/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2020-03-06 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count176
+\g__xparse_grabber_int=\count177
+\l__xparse_m_args_int=\count178
+\l__xparse_v_nesting_int=\count179
+)
+Package: lipsum 2019/01/02 v2.2 150 paragraphs of Lorem Ipsum dummy text
+
+(c:/texlive/2020/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex
+File: lipsum.ltd.tex 2019/01/02 v2.2 The Lorem ipsum dummy text
+))
+(c:/texlive/2020/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
+\c@tracingmulticols=\count180
+
+
+Package multicol Warning: May not work with the twocolumn option on input line 
+141.
+
+\mult@box=\box46
+\multicol@leftmargin=\dimen135
+\c@unbalance=\count181
+\c@collectmore=\count182
+\doublecol@number=\count183
+\multicoltolerance=\count184
+\multicolpretolerance=\count185
+\full@width=\dimen136
+\page@free=\dimen137
+\premulticols=\dimen138
+\postmulticols=\dimen139
+\multicolsep=\skip49
+\multicolbaselineskip=\skip50
+\partial@page=\box47
+\last@line=\box48
+\maxbalancingoverflow=\dimen140
+\mult@rightbox=\box49
+\mult@grightbox=\box50
+\mult@gfirstbox=\box51
+\mult@firstbox=\box52
+\@tempa=\box53
+\@tempa=\box54
+\@tempa=\box55
+\@tempa=\box56
+\@tempa=\box57
+\@tempa=\box58
+\@tempa=\box59
+\@tempa=\box60
+\@tempa=\box61
+\@tempa=\box62
+\@tempa=\box63
+\@tempa=\box64
+\@tempa=\box65
+\@tempa=\box66
+\@tempa=\box67
+\@tempa=\box68
+\@tempa=\box69
+\@tempa=\box70
+\@tempa=\box71
+\@tempa=\box72
+\@tempa=\box73
+\@tempa=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\c@minrows=\count186
+\c@columnbadness=\count187
+\c@finalcolumnbadness=\count188
+\last@try=\dimen141
+\multicolovershoot=\dimen142
+\multicolundershoot=\dimen143
+\mult@nat@firstbox=\box90
+\colbreak@box=\box91
+\mc@col@check@num=\count189
+) (c:/texlive/2020/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2020/01/20 v2.17e AMS math features
+\@mathmargin=\skip51
+
+For additional information on amsmath, use the `?' option.
+(c:/texlive/2020/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(c:/texlive/2020/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks15
+\ex@=\dimen144
+))
+(c:/texlive/2020/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen145
+)
+(c:/texlive/2020/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count190
+LaTeX Info: Redefining \frac on input line 227.
+\uproot@=\count191
+\leftroot@=\count192
+LaTeX Info: Redefining \overline on input line 389.
+\classnum@=\count193
+\DOTSCASE@=\count194
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
+\Mathstrutbox@=\box92
+\strutbox@=\box93
+\big@size=\dimen146
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+\macc@depth=\count195
+\c@MaxMatrixCols=\count196
+\dotsspace@=\muskip16
+\c@parentequation=\count197
+\dspbrk@lvl=\count198
+\tag@help=\toks16
+\row@=\count199
+\column@=\count266
+\maxfields@=\count267
+\andhelp@=\toks17
+\eqnshift@=\dimen147
+\alignsep@=\dimen148
+\tagshift@=\dimen149
+\tagwidth@=\dimen150
+\totwidth@=\dimen151
+\lineht@=\dimen152
+\@envbody=\toks18
+\multlinegap=\skip52
+\multlinetaggap=\skip53
+\mathdisplay@stack=\toks19
+LaTeX Info: Redefining \[ on input line 2859.
+LaTeX Info: Redefining \] on input line 2860.
+)
+(c:/texlive/2020/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(c:/texlive/2020/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(c:/texlive/2020/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\enitkv@toks@=\toks20
+\labelindent=\skip54
+\enit@outerparindent=\dimen153
+\enit@toks=\toks21
+\enit@inbox=\box94
+\enit@count@id=\count268
+\enitdp@description=\count269
+)
+(c:/texlive/2020/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+(c:/texlive/2020/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count270
+\float@exts=\toks22
+\float@box=\box95
+\@float@everytoks=\toks23
+\@floatcapt=\box96
+)
+(c:/texlive/2020/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\@float@every@algorithm=\toks24
+\c@algorithm=\count271
+)
+(c:/texlive/2020/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+Package: algpseudocode 
+
+(c:/texlive/2020/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count272
+\c@ALG@rem=\count273
+\c@ALG@nested=\count274
+\ALG@tlm=\skip55
+\ALG@thistlm=\skip56
+\c@ALG@Lnr=\count275
+\c@ALG@blocknr=\count276
+\c@ALG@storecount=\count277
+\c@ALG@tmpcounter=\count278
+\ALG@tmplength=\skip57
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (c:/texlive/2020/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(c:/texlive/2020/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+(c:/texlive/2020/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+(c:/texlive/2020/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(c:/texlive/2020/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks25
+)
+(c:/texlive/2020/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+
+(c:/texlive/2020/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(c:/texlive/2020/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+)
+\Gin@req@height=\dimen154
+\Gin@req@width=\dimen155
+)
+(c:/texlive/2020/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+(c:/texlive/2020/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2020/01/03 v3.4h Customizing captions (AR)
+
+(c:/texlive/2020/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/01/03 v1.8h caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 61.
+\captionmargin=\dimen156
+\captionmargin@=\dimen157
+\captionwidth=\dimen158
+\caption@tempdima=\dimen159
+\caption@indent=\dimen160
+\caption@parindent=\dimen161
+\caption@hangindent=\dimen162
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count279
+\c@continuedfloat=\count280
+Package caption Info: float package is loaded.
+)
+(c:/texlive/2020/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2020/01/22 v1.3d Sub-captions (AR)
+\c@subfigure=\count281
+\c@subtable=\count282
+)
+(c:/texlive/2020/texmf-dist/tex/latex/supertabular/supertabular.sty
+Package: supertabular 2020/02/02 v4.1g the supertabular environment
+\c@tracingst=\count283
+\ST@wd=\dimen163
+\ST@rightskip=\skip58
+\ST@leftskip=\skip59
+\ST@parfillskip=\skip60
+\ST@pageleft=\dimen164
+\ST@headht=\dimen165
+\ST@tailht=\dimen166
+\ST@pagesofar=\dimen167
+\ST@pboxht=\dimen168
+\ST@lineht=\dimen169
+\ST@prevht=\dimen170
+\ST@toadd=\dimen171
+\ST@dimen=\dimen172
+\ST@pbox=\box97
+)
+(c:/texlive/2020/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
+\multirow@colwidth=\skip61
+\multirow@cntb=\count284
+\multirow@dima=\skip62
+\bigstrutjot=\dimen173
+)
+(c:/texlive/2020/texmf-dist/tex/latex/footmisc/footmisc.sty
+Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
+\FN@temptoken=\toks26
+\footnotemargin=\dimen174
+\c@pp@next@reset=\count285
+\c@@fnserial=\count286
+Package footmisc Info: Declaring symbol style bringhurst on input line 855.
+Package footmisc Info: Declaring symbol style chicago on input line 863.
+Package footmisc Info: Declaring symbol style wiley on input line 872.
+Package footmisc Info: Declaring symbol style lamport-robust on input line 883.
+
+Package footmisc Info: Declaring symbol style lamport* on input line 903.
+Package footmisc Info: Declaring symbol style lamport*-robust on input line 924
+.
+) (./paper1.aux
+
+LaTeX Warning: Label `eq:6.1' multiply defined.
+
+
+LaTeX Warning: Label `eq:6.1' multiply defined.
+
+
+LaTeX Warning: Label `eq:10' multiply defined.
+
+)
+\openout1 = `paper1.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+ (c:/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count287
+\scratchdimen=\dimen175
+\scratchbox=\box98
+\nofMPsegments=\count288
+\nofMParguments=\count289
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count290
+\MPscratchDim=\dimen176
+\MPnumerator=\count291
+\makeMPintoPDFobject=\count292
+\everyMPtoPDFconversion=\toks28
+) (c:/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+
+(c:/texlive/2020/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+(c:/texlive/2020/texmf-dist/tex/latex/grfext/grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+
+(c:/texlive/2020/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+))
+(c:/texlive/2020/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
+
+(c:/texlive/2020/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
+)
+(c:/texlive/2020/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+))
+(c:/texlive/2020/texmf-dist/tex/latex/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(c:/texlive/2020/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
+
+(c:/texlive/2020/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: supertabular package is loaded.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 55.
+
+
+(c:/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 55.
+
+
+(c:/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Underfull \hbox (badness 10000) in paragraph at lines 62--62
+[][][]\OT1/cmr/m/n/8 https://www.iea.org/data-and-statistics/charts/transport-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--62
+\OT1/cmr/m/n/8 sector-co2-emissions-by-mode-in-the-sustainable-
+ []
+
+[1{c:/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 93--93
+[][][]\OT1/cmr/m/n/8 https://www.vanarama.com/car-leasing/blog/4-ways-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 93--93
+\OT1/cmr/m/n/8 augmented-reality-will-revolutionise-the-automotive-
+ []
+
+[2] [3]
+Underfull \hbox (badness 1194) in paragraph at lines 122--123
+[]\OT1/cmr/m/n/10 Each edge server con-sists of two queues, (1)
+ []
+
+<figures/pdf/fig1-iot-Arch.pdf, id=21, 614.295pt x 794.97pt>
+File: figures/pdf/fig1-iot-Arch.pdf Graphic file (type pdf)
+<use figures/pdf/fig1-iot-Arch.pdf>
+Package pdftex.def Info: figures/pdf/fig1-iot-Arch.pdf  used on input line 130.
+
+(pdftex.def)             Requested size: 229.5pt x 147.17717pt.
+
+Underfull \vbox (badness 7273) has occurred while \output is active []
+
+ [4 <./figures/pdf/fig1-iot-Arch.pdf>] [5]
+Underfull \hbox (badness 10000) in paragraph at lines 262--262
+[][][]\OT1/cmr/m/n/8 https://www.abiresearch.com/press/augmented-reality-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 262--262
+[][][]\OT1/cmr/m/n/8 https://medium.com/@CivilMaps/when-augmented-reality-
+ []
+
+[6]
+<figures/pdf/fig2-v2.pdf, id=58, 614.295pt x 794.97pt>
+File: figures/pdf/fig2-v2.pdf Graphic file (type pdf)
+<use figures/pdf/fig2-v2.pdf>
+Package pdftex.def Info: figures/pdf/fig2-v2.pdf  used on input line 312.
+(pdftex.def)             Requested size: 229.5pt x 166.43147pt.
+ [7 <./figures/pdf/fig2-v2.pdf>]
+Overfull \hbox (6.4718pt too wide) detected at line 360
+[][]
+ []
+
+[8]
+Overfull \hbox (5.35327pt too wide) in paragraph at lines 414--414
+[][][]\OT1/cmr/m/n/8 Amazon Com-pute SLA: https://aws.amazon.com/compute/sla| 
+ []
+
+[9]
+Underfull \hbox (badness 2103) in paragraph at lines 429--430
+[]\OT1/cmr/m/n/10 This pa-per di-vides en-ergy con-sump-tion of a
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 435--437
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 455--457
+[][]
+ []
+
+[10]
+Overfull \hbox (4.74327pt too wide) detected at line 487
+\OML/cmm/m/it/10 E[] \OT1/cmr/m/n/10 = [] [] \OML/cmm/m/it/10 z[] x[]\OT1/cmr/m
+/n/10 (\OML/cmm/m/it/10 p[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 p[] \OT1/cmr/m/n
+/10 (\OML/cmm/m/it/10 rq[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 rp[]\OT1/cmr/m/n/
+10 ))
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 499--499
+[][][]\OT1/cmr/m/n/8 Translating green en-ergy into 5G suc-cess
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 499--499
+\OT1/cmr/m/n/8 for op-er-a-tors, by Jiang Junmu, avail-able
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 499--499
+\OT1/cmr/m/n/8 at: https://www.huawei.com/br/technology-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 499--499
+\OT1/cmr/m/n/8 insights/publications/huawei-tech/90/green-energy-5g-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 500--500
+[][][]\OT1/cmr/m/n/8 Impact en-vi-ron-nemen-tal du num^^Serique : ten-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 500--500
+\OT1/cmr/m/n/8 dances ^^Ra 5 ans et gou-ver-nance de la 5G,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 500--500
+\OT1/cmr/m/n/8 https://theshiftproject.org/article/impact-environnemental-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 500--500
+[][][]\OT1/cmr/m/n/8 Microsoft, Google, Ama-zon { Who's the Biggest
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 500--500
+\OT1/cmr/m/n/8 Cli-mate Hyp-ocrite? by Eliz-a-beth Jardim,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 500--500
+\OT1/cmr/m/n/8 https://www.greenpeace.org/usa/microsoft-google-amazon-
+ []
+
+[11] [12]
+Underfull \hbox (badness 10000) in paragraph at lines 565--565
+[][][]\OT1/cmr/m/n/8 https://www.greenpeace.org/usa/microsoft-google-amazon-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 573--573
+[]\OT1/cmr/bx/n/14.4 Mobility-aware Ser-vice
+ []
+
+<figures/pdf/Macro-view.pdf, id=109, 614.295pt x 794.97pt>
+File: figures/pdf/Macro-view.pdf Graphic file (type pdf)
+<use figures/pdf/Macro-view.pdf>
+Package pdftex.def Info: figures/pdf/Macro-view.pdf  used on input line 590.
+(pdftex.def)             Requested size: 229.5pt x 90.6602pt.
+<figures/pdf/Workflow.pdf, id=111, 614.295pt x 794.97pt>
+File: figures/pdf/Workflow.pdf Graphic file (type pdf)
+<use figures/pdf/Workflow.pdf>
+Package pdftex.def Info: figures/pdf/Workflow.pdf  used on input line 597.
+(pdftex.def)             Requested size: 229.50731pt x 256.08342pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13 <./figures/pdf/Macro-view.pdf>] [14 <./figures/pdf/Workflow.pdf>]
+Underfull \hbox (badness 7012) in paragraph at lines 621--621
+[][][]\OT1/cmr/m/n/8 Macroscopic In-ter-net Topol-ogy Caida dataset, avail-
+ []
+
+
+Underfull \hbox (badness 6961) in paragraph at lines 621--621
+\OT1/cmr/m/n/8 able at: https://www.caida.org/data/internet-topology-
+ []
+
+<figures/pdf/fig3-sim-1.4km2-bs1.PNG, id=152, 578.16pt x 449.42906pt>
+File: figures/pdf/fig3-sim-1.4km2-bs1.PNG Graphic file (type png)
+<use figures/pdf/fig3-sim-1.4km2-bs1.PNG>
+Package pdftex.def Info: figures/pdf/fig3-sim-1.4km2-bs1.PNG  used on input lin
+e 625.
+(pdftex.def)             Requested size: 229.5pt x 178.39688pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 640--640
+[]\OT1/cmr/m/n/7 Processing
+ []
+
+
+Underfull \hbox (badness 10000) in alignment at lines 638--648
+[][][][]
+ []
+
+
+Underfull \hbox (badness 10000) in alignment at lines 657--668
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) in alignment at lines 677--685
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 687--687
+\OT1/cmr/m/n/8 able:https://www.raspberrypi.org/documentation/, In-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 687--687
+\OT1/cmr/m/n/8 Avail-able:https://ark.intel.com/content/www/us/en/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 687--687
+\OT1/cmr/m/n/8 ark/products/75277/intelxeon-processor-e5-2680-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 687--687
+\OT1/cmr/m/n/8 v2-25m-cache-2-80-ghz.html, Espres-sif. (Sep
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 687--687
+\OT1/cmr/m/n/8 2021). ESP8266EX Datasheet. Avail-able:
+ []
+
+
+Overfull \hbox (4.93938pt too wide) in paragraph at lines 687--687
+\OT1/cmr/m/n/8 https://www.espressif.com/en/support/download/documents,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 696--696
+[]\OT1/cmr/m/n/7 idle
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 696--696
+[]\OT1/cmr/m/n/7 busy
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 698--698
+[]\OT1/cmr/m/n/7 edge node-rasberry pi
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 698--698
+\OT1/cmr/m/n/7 2 in-struc-tions/cycle x 4
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 698--698
+\OT1/cmr/m/n/7 cores.1200 MHz = 9600
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 701--702
+[]\OT1/cmr/m/n/7 (115--
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 701--702
+\OT1/cmr/m/n/7 57)/112000=
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 701--702
+\OT1/cmr/m/n/7 0.000518
+ []
+
+
+Underfull \hbox (badness 10000) in alignment at lines 694--703
+[][][][]
+ []
+
+[15 <./figures/pdf/fig3-sim-1.4km2-bs1.PNG>]
+Underfull \hbox (badness 10000) in paragraph at lines 720--720
+[][][]\OT1/cmr/m/n/8 https://ember-climate.org/data/carbon-price-viewer/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 720--720
+\OT1/cmr/m/n/8 and https://www.statista.com/statistics/483590/prices-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 720--720
+\OT1/cmr/m/n/8 of-implemented-carbon-pricing-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 720--720
+\OT1/cmr/m/n/8 instruments-worldwide-by-select-country/,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 720--720
+\OT1/cmr/m/n/8 https://www.scientificamerican.com/article/cost-of-carbon-
+ []
+
+<figures/candid-arch.png, id=161, 575.90157pt x 383.93437pt>
+File: figures/candid-arch.png Graphic file (type png)
+<use figures/candid-arch.png>
+Package pdftex.def Info: figures/candid-arch.png  used on input line 744.
+(pdftex.def)             Requested size: 229.5pt x 151.06227pt.
+[16 <./figures/candid-arch.png>]
+Underfull \hbox (badness 4569) in paragraph at lines 749--749
+[][][]\OT1/cmr/m/n/8 MAWI Work-ing Group Traf-fic Archive, avail-able at:
+ []
+
+<figures/pdf/traffic-1.pdf, id=168, 614.295pt x 794.97pt>
+File: figures/pdf/traffic-1.pdf Graphic file (type pdf)
+<use figures/pdf/traffic-1.pdf>
+Package pdftex.def Info: figures/pdf/traffic-1.pdf  used on input line 756.
+(pdftex.def)             Requested size: 229.5pt x 154.68279pt.
+<figures/pdf/traffic-2.pdf, id=170, 614.295pt x 794.97pt>
+File: figures/pdf/traffic-2.pdf Graphic file (type pdf)
+<use figures/pdf/traffic-2.pdf>
+Package pdftex.def Info: figures/pdf/traffic-2.pdf  used on input line 761.
+(pdftex.def)             Requested size: 229.5pt x 154.68279pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 771--772
+
+ []
+
+
+Overfull \hbox (133.76357pt too wide) in paragraph at lines 773--779
+[][] 
+ []
+
+(./paper1.bbl [17 <./figures/pdf/traffic-1.pdf> <./figures/pdf/traffic-2.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 59--63
+[]\OT1/cmr/m/n/10 Gunter Bolch, Ste-fan Greiner, Her-mann
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 71--75
+[]\OT1/cmr/m/n/10 Arash Bo-zorgchenani, Setareh Magh-sudi,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--99
+[]\OT1/cmr/m/n/10 M Ab-dul-lah Can-baz, Jay Thom, and
+ []
+
+
+Underfull \hbox (badness 1509) in paragraph at lines 95--99
+\OT1/cmr/m/n/10 Mehmet Hadi Gunes.  Com-par-a-tive anal-y-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--99
+\OT1/cmr/m/it/10 Con-fer-ence on Com-puter Com-mu-ni-ca-tions
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--99
+\OT1/cmr/m/it/10 Work-shops (IN-FO-COM WK-SHPS)\OT1/cmr/m/n/10 , pages
+ []
+
+[18]
+Underfull \hbox (badness 3471) in paragraph at lines 153--158
+[]\OT1/cmr/m/n/10 Yiheng Feng, Chun-hui Yu, Shaob-ing Xu,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 181--185
+[]\OT1/cmr/m/n/10 Harshit Gupta, Amir Vahid Dast-jerdi,
+ []
+
+
+Underfull \hbox (badness 3557) in paragraph at lines 181--185
+\OT1/cmr/m/n/10 Soumya K Ghosh, and Ra-jku-mar Buyya.
+ []
+
+
+Underfull \hbox (badness 2837) in paragraph at lines 181--185
+\OT1/cmr/m/n/10 of re-source man-age-ment tech-niques in the
+ []
+
+
+Underfull \hbox (badness 2894) in paragraph at lines 233--237
+[]\OT1/cmr/m/n/10 Leila Is-mail and Huned Mater-wala.  Es-
+ []
+
+[19]
+Underfull \hbox (badness 2469) in paragraph at lines 269--274
+[]\OT1/cmr/m/n/10 Mascha Kurpicz, Anne-C^^Secile Org-erie, and
+ []
+
+
+Underfull \hbox (badness 1127) in paragraph at lines 269--274
+\OT1/cmr/m/n/10 Anita Sobe.  How much does a vm cost?
+ []
+
+
+Underfull \hbox (badness 2818) in paragraph at lines 294--299
+[]\OT1/cmr/m/n/10 Jeong-Woo Lee, Chang-Rak Yoon, Jungyu
+ []
+
+[20]
+Underfull \hbox (badness 2913) in paragraph at lines 339--345
+\OT1/cmr/m/n/10 Man-ish Parashar, and Jean-Marc Menaud.
+ []
+
+
+Underfull \hbox (badness 2865) in paragraph at lines 369--374
+[]\OT1/cmr/m/n/10 Tom H Luan, Lin X Cai, Jim-ing Chen,
+ []
+
+
+Underfull \hbox (badness 4713) in paragraph at lines 422--428
+[]\OT1/cmr/m/n/10 Amir-Mohammad Rah-mani, Nanda Ku-mar
+ []
+
+[21]
+Underfull \hbox (badness 3780) in paragraph at lines 477--482
+\OT1/cmr/m/n/10 ti-mized iot ser-vice place-ment in the fog.
+ []
+
+
+Underfull \hbox (badness 3780) in paragraph at lines 484--489
+\OT1/cmr/m/n/10 ti-mized iot ser-vice place-ment in the fog.
+ []
+
+
+Underfull \hbox (badness 1436) in paragraph at lines 491--496
+\OT1/cmr/m/it/10 Sym-po-sium on In-te-grated Net-work and Ser-
+ []
+
+
+Underfull \hbox (badness 1270) in paragraph at lines 517--521
+\OT1/cmr/m/n/10 en-vi-ron-ments.  In \OT1/cmr/m/it/10 2021 IEEE 5th In-ter-na-
+ []
+
+[22]
+Underfull \hbox (badness 10000) in paragraph at lines 568--573
+[]\OT1/cmr/m/n/10 Weiwen Zhang, Yong-gang Wen, and
+ []
+
+
+Underfull \hbox (badness 7595) in paragraph at lines 568--573
+\OT1/cmr/m/it/10 on Wire-less Com-mu-ni-ca-tions\OT1/cmr/m/n/10 , 14(1):81--93,
+
+ []
+
+) [23] (./paper1.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 6609 strings out of 480608
+ 104877 string characters out of 5907535
+ 460017 words of memory out of 5000000
+ 22377 multiletter control sequences out of 15000+600000
+ 541870 words of font info for 60 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 41i,16n,42p,1401b,451s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/tex
+live/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2020
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2020/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2020/texmf-dist/fonts/
+type1/public/amsfonts/cmextra/cmex7.pfb><c:/texlive/2020/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmmi5.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmmi7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
+><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texli
+ve/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2020/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2020/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2020/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9
+.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl9.pfb><c:/t
+exlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/20
+20/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2020/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2020/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/pub
+lic/amsfonts/symbols/msam10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/
+cm-super/sfrm0800.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/s
+frm1000.pfb>
+Output written on paper1.pdf (23 pages, 1401435 bytes).
+PDF statistics:
+ 291 PDF objects out of 1000 (max. 8388607)
+ 193 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 89 words of extra memory for PDF output out of 10000 (max. 10000000)
+

@@ -1,0 +1,584 @@
+\begin{thebibliography}{10}
+
+\bibitem{abdelhamid2015vehicle}
+Sherin Abdelhamid, Hossam~S Hassanein, and Glen Takahara.
+\newblock Vehicle as a resource (vaar).
+\newblock {\em IEEE Network}, 29(1):12--17, 2015.
+
+\bibitem{abdi2015vehicle}
+Lotfi Abdi, Faten~Ben Abdallah, and Aref Meddeb.
+\newblock In-vehicle augmented reality traffic information system: a new type
+  of communication between driver and vehicle.
+\newblock {\em Procedia Computer Science}, 73:242--249, 2015.
+
+\bibitem{ahvar2019estimating}
+Ehsan Ahvar, Anne-C{\'e}cile Orgerie, and Adrien Lebre.
+\newblock Estimating energy consumption of cloud, fog and edge computing
+  infrastructures.
+\newblock {\em IEEE Transactions on Sustainable Computing}, 2019.
+
+\bibitem{azizi2019priority}
+Sadoon Azizi, Fariba Khosroabadi, and Mohammad Shojafar.
+\newblock A priority-based service placement policy for fog-cloud computing
+  systems.
+\newblock {\em Computational Methods for Differential Equations}, 7(4 (Special
+  Issue)):521--534, 2019.
+
+\bibitem{baresi2017empowering}
+Luciano Baresi, Danilo~Filgueira Mendon{\c{c}}a, and Martin Garriga.
+\newblock Empowering low-latency applications through a serverless edge
+  computing architecture.
+\newblock In {\em European Conference on Service-Oriented and Cloud Computing},
+  pages 196--210. Springer, 2017.
+
+\bibitem{bekaroo2016power}
+Girish Bekaroo and Aditya Santokhee.
+\newblock Power consumption of the raspberry pi: A comparative analysis.
+\newblock In {\em 2016 IEEE International Conference on Emerging Technologies
+  and Innovative Business Practices for the Transformation of Societies
+  (EmergiTech)}, pages 361--366. IEEE, 2016.
+
+\bibitem{beloglazov2012energy}
+Anton Beloglazov, Jemal Abawajy, and Rajkumar Buyya.
+\newblock Energy-aware resource allocation heuristics for efficient management
+  of data centers for cloud computing.
+\newblock {\em Future generation computer systems}, 28(5):755--768, 2012.
+
+\bibitem{bitam2015vanet}
+Salim Bitam, Abdelhamid Mellouk, and Sherali Zeadally.
+\newblock Vanet-cloud: a generic cloud computing model for vehicular ad hoc
+  networks.
+\newblock {\em IEEE Wireless Communications}, 22(1):96--102, 2015.
+
+\bibitem{bokhari1981mapping}
+Shahid~H. Bokhari.
+\newblock On the mapping problem.
+\newblock {\em IEEE Trans. Computers}, 30(3):207--214, 1981.
+
+\bibitem{bolch2006queueing}
+Gunter Bolch, Stefan Greiner, Hermann De~Meer, and Kishor~S Trivedi.
+\newblock {\em Queueing networks and Markov chains: modeling and performance
+  evaluation with computer science applications}.
+\newblock John Wiley \& Sons, 2006.
+
+\bibitem{bonomi2014fog}
+Flavio Bonomi, Rodolfo Milito, Preethi Natarajan, and Jiang Zhu.
+\newblock Fog computing: A platform for internet of things and analytics.
+\newblock In {\em Big data and internet of things: A roadmap for smart
+  environments}, pages 169--186. Springer, 2014.
+
+\bibitem{bozorgchenani2021computation}
+Arash Bozorgchenani, Setareh Maghsudi, Daniele Tarchi, and Ekram Hossain.
+\newblock Computation offloading in heterogeneous vehicular edge networks:
+  On-line and off-policy bandit solutions.
+\newblock {\em IEEE Transactions on Mobile Computing}, 2021.
+
+\bibitem{brent1989efficient}
+Richard~P. Brent.
+\newblock Efficient implementation of the first-fit strategy for dynamic
+  storage allocation.
+\newblock {\em ACM Transactions on Programming Languages and Systems (TOPLAS)},
+  11(3):388--403, 1989.
+
+\bibitem{brogi2017}
+Antonio Brogi and Stefano Forti.
+\newblock Qos-aware deployment of iot applications through the fog.
+\newblock {\em IEEE Internet of Things Journal}, 4(5):1185--1192, 2017.
+
+\bibitem{byers2017architectural}
+Charles~C Byers.
+\newblock Architectural imperatives for fog computing: Use cases, requirements,
+  and architectural techniques for fog-enabled iot networks.
+\newblock {\em IEEE Communications Magazine}, 55(8):14--20, 2017.
+
+\bibitem{canbaz2017comparative}
+M~Abdullah Canbaz, Jay Thom, and Mehmet~Hadi Gunes.
+\newblock Comparative analysis of internet topology data sets.
+\newblock In {\em 2017 IEEE Conference on Computer Communications Workshops
+  (INFOCOM WKSHPS)}, pages 635--640. IEEE, 2017.
+
+\bibitem{chen2017service}
+Jiacheng Chen, Haibo Zhou, Ning Zhang, Wenchao Xu, Quan Yu, Lin Gui, and Xuemin
+  Shen.
+\newblock Service-oriented dynamic connection management for software-defined
+  internet of vehicles.
+\newblock {\em IEEE Transactions on Intelligent Transportation Systems},
+  18(10):2826--2837, 2017.
+
+\bibitem{chen2018survey}
+Yue-Yue Chen, Pin Lv, De-Ke Guo, Tong-Qing Zhou, and Ming Xu.
+\newblock A survey on task and participant matching in mobile crowd sensing.
+\newblock {\em Journal of Computer Science and Technology}, 33(4):768--791,
+  2018.
+
+\bibitem{chen2018application}
+Zhuo Chen.
+\newblock {\em An application platform for wearable cognitive assistance}.
+\newblock PhD thesis, PhD thesis, Carnegie Mellon University, 2018. 1, 2, 9,
+  10, 34, 56, 65, 75, 2018.
+
+\bibitem{chen2017empirical}
+Zhuo Chen, Wenlu Hu, Junjue Wang, Siyan Zhao, Brandon Amos, Guanhang Wu,
+  Kiryong Ha, Khalid Elgazzar, Padmanabhan Pillai, Roberta Klatzky, et~al.
+\newblock An empirical study of latency in an emerging class of edge computing
+  applications for wearable cognitive assistance.
+\newblock In {\em Proceedings of the Second ACM/IEEE Symposium on Edge
+  Computing}, pages 1--14, 2017.
+
+\bibitem{cheng2018planning}
+Geyao Cheng, Deke Guo, Jianmai Shi, and Yudong Qin.
+\newblock Planning city-wide package distribution schemes using crowdsourced
+  public transportation systems.
+\newblock {\em IEEE Access}, 7:1234--1246, 2018.
+
+\bibitem{colistra2015task}
+Giuseppe Colistra.
+\newblock {\em Task allocation in the Internet of Things}.
+\newblock PhD thesis, Universita'degli Studi di Cagliari, 2015.
+
+\bibitem{deng2016optimal}
+Ruilong Deng, Rongxing Lu, Chengzhe Lai, Tom~H Luan, and Hao Liang.
+\newblock Optimal workload allocation in fog-cloud computing toward balanced
+  delay and power consumption.
+\newblock {\em IEEE Internet of Things Journal}, 3(6):1171--1181, 2016.
+
+\bibitem{djemai2020mobility}
+Tanissia Djemai, Patricia Stolf, Thierry Monteil, and Jean-Marc Pierson.
+\newblock Mobility support for energy and qos aware iot services placement in
+  the fog.
+\newblock In {\em 2020 International Conference on Software, Telecommunications
+  and Computer Networks (SoftCOM)}, pages 1--7. IEEE, 2020.
+
+\bibitem{feng2018augmented}
+Yiheng Feng, Chunhui Yu, Shaobing Xu, Henry~X Liu, and Huei Peng.
+\newblock An augmented reality environment for connected and automated vehicle
+  testing and evaluation.
+\newblock In {\em 2018 IEEE Intelligent Vehicles Symposium (IV)}, pages
+  1549--1554. IEEE, 2018.
+
+\bibitem{gantz2019digitization}
+John Gantz, D~Reinsel, and J~Rydning.
+\newblock The digitization of the world from edge to core, 2019.
+
+\bibitem{gautam2012analysis}
+Natarajan Gautam.
+\newblock {\em Analysis of Queues}.
+\newblock CRC Press, LLC, Boca Raton, Florida, United States, 2012.
+
+\bibitem{ghiassi2014toward}
+Yashar Ghiassi-Farrokhfal, Srinivasan Keshav, and Catherine Rosenberg.
+\newblock Toward a realistic performance analysis of storage systems in smart
+  grids.
+\newblock {\em IEEE Transactions on Smart Grid}, 6(1):402--410, 2014.
+
+\bibitem{gia2019exploiting}
+Tuan~Nguyen Gia and Mingzhe Jiang.
+\newblock Exploiting fog computing in health monitoring.
+\newblock {\em Fog and Edge Computing: Principles and Paradigms}, pages
+  291--318, 2019.
+
+\bibitem{gupta2017ifogsim}
+Harshit Gupta, Amir Vahid~Dastjerdi, Soumya~K Ghosh, and Rajkumar Buyya.
+\newblock ifogsim: A toolkit for modeling and simulation of resource management
+  techniques in the internet of things, edge and fog computing environments.
+\newblock {\em Software: Practice and Experience}, 47(9):1275--1296, 2017.
+
+\bibitem{ha2013impact}
+Kiryong Ha, Padmanabhan Pillai, Grace Lewis, Soumya Simanta, Sarah Clinch,
+  Nigel Davies, and Mahadev Satyanarayanan.
+\newblock The impact of mobile multimedia applications on data center
+  consolidation.
+\newblock In {\em 2013 IEEE international conference on cloud engineering
+  (IC2E)}, pages 166--176. IEEE, 2013.
+
+\bibitem{hassan2020priority}
+Hiwa~Omer Hassan, Sadoon Azizi, and Mohammad Shojafar.
+\newblock Priority, network and energy-aware placement of iot-based application
+  services in fog-cloud environments.
+\newblock {\em IET Communications}, 14(13):2117--2129, 2020.
+
+\bibitem{he2013mobility}
+Shibo He, Jiming Chen, Xu~Li, Xuemin Shen, and Youxian Sun.
+\newblock Mobility and intruder prior information improving the barrier
+  coverage of sparse sensor networks.
+\newblock {\em IEEE transactions on mobile computing}, 13(6):1268--1282, 2013.
+
+\bibitem{heinrich2017predicting}
+Franz~Christian Heinrich, Tom Cornebize, Augustin Degomme, Arnaud Legrand,
+  Alexandra Carpen-Amarie, Sascha Hunold, Anne-C{\'e}cile Orgerie, and Martin
+  Quinson.
+\newblock Predicting the energy-consumption of mpi applications at scale using
+  only a single node.
+\newblock In {\em 2017 IEEE International Conference on Cluster Computing
+  (CLUSTER)}, pages 92--102. IEEE, 2017.
+
+\bibitem{hernandez2017implementing}
+Lilian Hernandez, Hung Cao, and Monica Wachowicz.
+\newblock Implementing an edge-fog-cloud architecture for stream data
+  management.
+\newblock In {\em 2017 IEEE Fog World Congress (FWC)}, pages 1--6. IEEE, 2017.
+
+\bibitem{hu2015mobile}
+Yun~Chao Hu, Milan Patel, Dario Sabella, Nurit Sprecher, and Valerie Young.
+\newblock Mobile edge computing—a key technology towards 5g.
+\newblock {\em ETSI white paper}, 11(11):1--16, 2015.
+
+\bibitem{hussain2019fog}
+Md~Hussain, MM~Beg, et~al.
+\newblock Fog computing for internet of things (iot)-aided smart grid
+  architectures.
+\newblock {\em Big Data and cognitive computing}, 3(1):8, 2019.
+
+\bibitem{ismail2021escove}
+Leila Ismail and Huned Materwala.
+\newblock Escove: Energy-sla-aware edge--cloud computation offloading in
+  vehicular networks.
+\newblock {\em Sensors}, 21(15):5233, 2021.
+
+\bibitem{jalali2016fog}
+Fatemeh Jalali, Kerry Hinton, Robert Ayre, Tansu Alpcan, and Rodney~S Tucker.
+\newblock Fog computing may help to save energy in cloud computing.
+\newblock {\em IEEE Journal on Selected Areas in Communications},
+  34(5):1728--1739, 2016.
+
+\bibitem{janevski2003traffic}
+Toni Janevski.
+\newblock {\em Traffic analysis and design of wireless IP networks}.
+\newblock Artech House, 2003.
+
+\bibitem{jia2015optimal}
+Mike Jia, Jiannong Cao, and Weifa Liang.
+\newblock Optimal cloudlet placement and user to cloudlet allocation in
+  wireless metropolitan area networks.
+\newblock {\em IEEE Transactions on Cloud Computing}, 5(4):725--737, 2015.
+
+\bibitem{jones2018stop}
+Nicola Jones.
+\newblock How to stop data centres from gobbling up the world's electricity.
+\newblock {\em Nature}, 561(7722):163--167, 2018.
+
+\bibitem{khattak2019utilization}
+Hasan~Ali Khattak, Hafsa Arshad, Saif ul~Islam, Ghufran Ahmed, Sohail Jabbar,
+  Abdullahi~Mohamud Sharif, and Shehzad Khalid.
+\newblock Utilization and load balancing in fog servers for health
+  applications.
+\newblock {\em EURASIP Journal on Wireless Communications and Networking},
+  2019(1):91, 2019.
+
+\bibitem{kurpicz2016much}
+Mascha Kurpicz, Anne-C{\'e}cile Orgerie, and Anita Sobe.
+\newblock How much does a vm cost? energy-proportional accounting in vm-based
+  environments.
+\newblock In {\em 2016 24th Euromicro International Conference on Parallel,
+  Distributed, and Network-Based Processing (PDP)}, pages 651--658. IEEE, 2016.
+
+\bibitem{la2019enabling}
+Quang~Duy La, Mao~V Ngo, Thinh~Quang Dinh, Tony~QS Quek, and Hyundong Shin.
+\newblock Enabling intelligence in fog computing to achieve energy and latency
+  reduction.
+\newblock {\em Digital Communications and Networks}, 5(1):3--9, 2019.
+
+\bibitem{lakhina2003geographic}
+Anukool Lakhina, John~W Byers, Mark Crovella, and Ibrahim Matta.
+\newblock On the geographic location of internet resources.
+\newblock {\em IEEE Journal on Selected Areas in Communications},
+  21(6):934--948, 2003.
+
+\bibitem{lee2015powering}
+Hyung~Gyu Lee and Naehyuck Chang.
+\newblock Powering the iot: Storage-less and converter-less energy harvesting.
+\newblock In {\em The 20th Asia and South Pacific Design Automation
+  Conference}, pages 124--129. IEEE, 2015.
+
+\bibitem{lee2015development}
+Jeong-Woo Lee, Chang-Rak Yoon, Jungyu Kang, Byoung-Jun Park, and Kyong-Ho Kim.
+\newblock Development of lane-level guidance service in vehicle augmented
+  reality system.
+\newblock In {\em 2015 17th International Conference on Advanced Communication
+  Technology (ICACT)}, pages 263--266. IEEE, 2015.
+
+\bibitem{lee2012energy}
+Young~Choon Lee and Albert~Y Zomaya.
+\newblock Energy efficient utilization of resources in cloud computing systems.
+\newblock {\em The Journal of Supercomputing}, 60(2):268--280, 2012.
+
+\bibitem{li2019compound}
+Longjiang Li, Hongmei Zhou, Shawn~Xiaoli Xiong, Jianjun Yang, and Yuming Mao.
+\newblock Compound model of task arrivals and load-aware offloading for
+  vehicular mobile edge computing networks.
+\newblock {\em IEEE Access}, 7:26631--26640, 2019.
+
+\bibitem{li2019energy}
+Qiuping Li, Junhui Zhao, Yi~Gong, and Qingmiao Zhang.
+\newblock Energy-efficient computation offloading and resource allocation in
+  fog computing for internet of everything.
+\newblock {\em China Communications}, 16(3):32--41, 2019.
+
+\bibitem{li2018enabling}
+Wei Li, Ting Yang, Flavia~C Delicato, Paulo~F Pires, Zahir Tari, Samee~U Khan,
+  and Albert~Y Zomaya.
+\newblock On enabling sustainable edge computing with renewable energy
+  resources.
+\newblock {\em IEEE Communications Magazine}, 56(5):94--101, 2018.
+
+\bibitem{li2017balancing}
+Yunbo Li, Anne-C{\'e}cile Orgerie, and Jean-Marc Menaud.
+\newblock Balancing the use of batteries and opportunistic scheduling policies
+  for maximizing renewable energy consumption in a cloud data center.
+\newblock In {\em 2017 25th Euromicro International Conference on Parallel,
+  Distributed and Network-based Processing (PDP)}, pages 408--415. IEEE, 2017.
+
+\bibitem{li2018end}
+Yunbo Li, Anne-C{\'e}cile Orgerie, Ivan Rodero, Betsegaw~Lemma Amersho, Manish
+  Parashar, and Jean-Marc Menaud.
+\newblock End-to-end energy models for edge cloud-based iot platforms:
+  Application to data stream analysis in iot.
+\newblock {\em Future Generation Computer Systems}, 87:667--678, 2018.
+
+\bibitem{li2017leveraging}
+Yunbo Li, Anne-C{\'e}cile Orgerie, Ivan Rodero, Manish Parashar, and Jean-Marc
+  Menaud.
+\newblock Leveraging renewable energy in edge clouds for data stream analysis
+  in iot.
+\newblock In {\em 2017 17th IEEE/ACM International Symposium on Cluster, Cloud
+  and Grid Computing (CCGRID)}, pages 186--195. IEEE, 2017.
+
+\bibitem{ligo2017throughput}
+Alexandre~K Ligo, Jon~M Peha, Pedro Ferreira, and Jo{\~a}o Barros.
+\newblock Throughput and economics of dsrc-based internet of vehicles.
+\newblock {\em IEEE access}, 6:7276--7290, 2017.
+
+\bibitem{lin2017resource}
+Chun-Cheng Lin, Der-Jiunn Deng, and Chia-Chi Yao.
+\newblock Resource allocation in vehicular cloud computing systems with
+  heterogeneous vehicles and roadside units.
+\newblock {\em IEEE Internet of Things Journal}, 5(5):3692--3700, 2017.
+
+\bibitem{liu2019joint}
+Liqing Liu, Xijuan Guo, Zheng Chang, and Tapani Ristaniemi.
+\newblock Joint optimization of energy and delay for computation offloading in
+  cloudlet-assisted mobile cloud computing.
+\newblock {\em Wireless Networks}, 25(4):2027--2040, 2019.
+
+\bibitem{lu2014connected}
+Ning Lu, Nan Cheng, Ning Zhang, Xuemin Shen, and Jon~W Mark.
+\newblock Connected vehicles: Solutions and challenges.
+\newblock {\em IEEE internet of things journal}, 1(4):289--299, 2014.
+
+\bibitem{luan2013engineering}
+Tom~H Luan, Lin~X Cai, Jiming Chen, Xuemin~Sherman Shen, and Fan Bai.
+\newblock Engineering a distributed infrastructure for large-scale
+  cost-effective content dissemination over urban vehicular networks.
+\newblock {\em IEEE Transactions on Vehicular Technology}, 63(3):1419--1435,
+  2013.
+
+\bibitem{lyu2016multiuser}
+Xinchen Lyu, Hui Tian, Cigdem Sengul, and Ping Zhang.
+\newblock Multiuser joint task offloading and resource optimization in
+  proximate clouds.
+\newblock {\em IEEE Transactions on Vehicular Technology}, 66(4):3435--3447,
+  2016.
+
+\bibitem{malandrino2013content}
+Francesco Malandrino, Claudio Casetti, Carla-Fabiana Chiasserini, and Marco
+  Fiore.
+\newblock Content download in vehicular networks in presence of noisy mobility
+  prediction.
+\newblock {\em IEEE Transactions on Mobile Computing}, 13(5):1007--1021, 2013.
+
+\bibitem{mayer2017emufog}
+Ruben Mayer, Leon Graser, Harshit Gupta, Enrique Saurez, and Umakishore
+  Ramachandran.
+\newblock Emufog: Extensible and scalable emulation of large-scale fog
+  computing infrastructures.
+\newblock In {\em 2017 IEEE Fog World Congress (FWC)}, pages 1--6. IEEE, 2017.
+
+\bibitem{montero2017extending}
+Rub{\'e}n~S Montero, Elisa Rojas, Alfonso~A Carrillo, and Ignacio~Mart{\'\i}n
+  Llorente.
+\newblock Extending the cloud to the network edge.
+\newblock {\em Computer}, 50(4):91--95, 2017.
+
+\bibitem{nezami2021decentralized}
+Zeinab Nezami, Kamran Zamanifar, Karim Djemame, and Evangelos Pournaras.
+\newblock Decentralized edge-to-cloud load balancing: Service placement for the
+  internet of things.
+\newblock {\em IEEE Access}, 9:64983--65000, 2021.
+
+\bibitem{priyanka2017sudden}
+S~Priyanka, G~Hemalatha, and C~Saranya.
+\newblock Sudden unintended acceleration avoidance and drowsiness detector for
+  automobile accidents prevention.
+\newblock In {\em 2017 Third International Conference on Science Technology
+  Engineering \& Management (ICONSTEM)}, pages 964--967. IEEE, 2017.
+
+\bibitem{puliafito2020mobfogsim}
+Carlo Puliafito, Diogo~M Gon{\c{c}}alves, M{\'a}rcio~M Lopes, Leonardo~L
+  Martins, Edmundo Madeira, Enzo Mingozzi, Omer Rana, and Luiz~F Bittencourt.
+\newblock Mobfogsim: Simulation of mobility and migration for fog computing.
+\newblock {\em Simulation Modelling Practice and Theory}, 101:102062, 2020.
+
+\bibitem{rahmani2015smart}
+Amir-Mohammad Rahmani, Nanda~Kumar Thanigaivelan, Tuan~Nguyen Gia, Jose
+  Granados, Behailu Negash, Pasi Liljeberg, and Hannu Tenhunen.
+\newblock Smart e-health gateway: Bringing intelligence to internet-of-things
+  based ubiquitous healthcare systems.
+\newblock In {\em 2015 12th Annual IEEE Consumer Communications and Networking
+  Conference (CCNC)}, pages 826--834. IEEE, 2015.
+
+\bibitem{rameau2016real}
+Fran{\c{c}}ois Rameau, Hyowon Ha, Kyungdon Joo, Jinsoo Choi, Kibaek Park, and
+  In~So Kweon.
+\newblock A real-time augmented reality system to see-through cars.
+\newblock {\em IEEE transactions on visualization and computer graphics},
+  22(11):2395--2404, 2016.
+
+\bibitem{rani2016computer}
+P~Sheela Rani, P~Subhashree, and N~Sankari Devi.
+\newblock Computer vision based gaze tracking for accident prevention.
+\newblock In {\em 2016 World Conference on Futuristic Trends in Research and
+  Innovation for Social Welfare (Startup Conclave)}, pages 1--6. IEEE, 2016.
+
+\bibitem{rao2012cloud}
+BB~Prahlada Rao, Paval Saluia, Neetu Sharma, Ankit Mittal, and Shivay~Veer
+  Sharma.
+\newblock Cloud computing for internet of things \& sensing based applications.
+\newblock In {\em 2012 Sixth International Conference on Sensing Technology
+  (ICST)}, pages 374--380. IEEE, 2012.
+
+\bibitem{salaht2020overview}
+Farah~Ait Salaht, Fr{\'e}d{\'e}ric Desprez, and Adrien Lebre.
+\newblock An overview of service placement problem in fog and edge computing.
+\newblock {\em ACM Computing Surveys (CSUR)}, 53(3):1--35, 2020.
+
+\bibitem{satria2017recovery}
+Dimas Satria, Daihee Park, and Minho Jo.
+\newblock Recovery for overloaded mobile edge computing.
+\newblock {\em Future Generation Computer Systems}, 70:138--147, 2017.
+
+\bibitem{shi2016edge}
+Weisong Shi, Jie Cao, Quan Zhang, Youhuizi Li, and Lanyu Xu.
+\newblock Edge computing: Vision and challenges.
+\newblock {\em IEEE internet of things journal}, 3(5):637--646, 2016.
+
+\bibitem{silva2018ethical}
+Ricardo Silva and Razi Iqbal.
+\newblock Ethical implications of social internet of vehicles systems.
+\newblock {\em IEEE Internet of Things Journal}, 6(1):517--531, 2018.
+
+\bibitem{sivaraman2011profiling}
+Vijay Sivaraman, Arun Vishwanath, Zhi Zhao, and Craig Russell.
+\newblock Profiling per-packet and per-byte energy consumption in the netfpga
+  gigabit router.
+\newblock In {\em 2011 IEEE Conference on Computer Communications Workshops
+  (INFOCOM WKSHPS)}, pages 331--336. IEEE, 2011.
+
+\bibitem{skarlat2017}
+Olena Skarlat, Matteo Nardelli, Stefan Schulte, Michael Borkowski, and Philipp
+  Leitner.
+\newblock Optimized iot service placement in the fog.
+\newblock {\em Service Oriented Computing and Applications}, 11(4):427--443,
+  2017.
+
+\bibitem{skarlat2017optimized}
+Olena Skarlat, Matteo Nardelli, Stefan Schulte, Michael Borkowski, and Philipp
+  Leitner.
+\newblock Optimized iot service placement in the fog.
+\newblock {\em Service Oriented Computing and Applications}, 11(4):427--443,
+  2017.
+
+\bibitem{taneja2017resource}
+Mohit Taneja and Alan Davy.
+\newblock Resource aware placement of iot application modules in fog-cloud
+  computing paradigm.
+\newblock In {\em 2017 IFIP/IEEE Symposium on Integrated Network and Service
+  Management (IM)}, pages 1222--1228. IEEE, 2017.
+
+\bibitem{tarneberg2017dynamic}
+William T{\"a}rneberg, Amardeep Mehta, Eddie Wadbro, Johan Tordsson, Johan
+  Eker, Maria Kihl, and Erik Elmroth.
+\newblock Dynamic application placement in the mobile cloud network.
+\newblock {\em Future Generation Computer Systems}, 70:163--177, 2017.
+
+\bibitem{vishwanath2014modeling}
+Arun Vishwanath, Kerry Hinton, Robert~WA Ayre, and Rodney~S Tucker.
+\newblock Modeling energy consumption in high-capacity routers and switches.
+\newblock {\em IEEE Journal on Selected Areas in Communications},
+  32(8):1524--1532, 2014.
+
+\bibitem{wang2017computation}
+Chenmeng Wang, Chengchao Liang, F~Richard Yu, Qianbin Chen, and Lun Tang.
+\newblock Computation offloading and resource allocation in wireless cellular
+  networks with mobile edge computing.
+\newblock {\em IEEE Transactions on Wireless Communications}, 16(8):4924--4938,
+  2017.
+
+\bibitem{wiesner2021leaf}
+Philipp Wiesner and Lauritz Thamsen.
+\newblock Leaf: Simulating large energy-aware fog computing environments.
+\newblock In {\em 2021 IEEE 5th International Conference on Fog and Edge
+  Computing (ICFEC)}, pages 29--36. IEEE, 2021.
+
+\bibitem{wintersberger2019fostering}
+Philipp Wintersberger, Anna-Katharina Frison, Andreas Riener, and Tamara~von
+  Sawitzky.
+\newblock Fostering user acceptance and trust in fully automated vehicles:
+  Evaluating the potential of augmented reality.
+\newblock {\em PRESENCE: Virtual and Augmented Reality}, 27(1):46--62, 2019.
+
+\bibitem{wu2015cloud}
+Caesar Wu and Rajkumar Buyya.
+\newblock {\em Cloud Data Centers and Cost Modeling: A complete guide to
+  planning, designing and building a cloud data center}.
+\newblock Morgan Kaufmann, 2015.
+
+\bibitem{yan2019modeling}
+Ming Yan, Chien~Aun Chan, Andr{\'e}~F Gygax, Jinyao Yan, Leith Campbell,
+  Ampalavanapillai Nirmalathas, and Christopher Leckie.
+\newblock Modeling the total energy consumption of mobile network services and
+  applications.
+\newblock {\em Energies}, 12(1):184, 2019.
+
+\bibitem{yousefpour2019all}
+Ashkan Yousefpour, Caleb Fung, Tam Nguyen, Krishna Kadiyala, Fatemeh Jalali,
+  Amirreza Niakanlahiji, Jian Kong, and Jason~P Jue.
+\newblock All one needs to know about fog computing and related edge computing
+  paradigms: A complete survey.
+\newblock {\em Journal of Systems Architecture}, 2019.
+
+\bibitem{yousefpour2018reducing}
+Ashkan Yousefpour, Genya Ishigaki, Riti Gour, and Jason~P Jue.
+\newblock On reducing iot service delay via fog offloading.
+\newblock {\em IEEE Internet of things Journal}, 5(2):998--1010, 2018.
+
+\bibitem{yousefpour2019fogplan}
+Ashkan Yousefpour, Ashish Patil, Genya Ishigaki, Inwoong Kim, Xi~Wang, Hakki~C
+  Cankaya, Qiong Zhang, Weisheng Xie, and Jason~P Jue.
+\newblock Fogplan: A lightweight qos-aware dynamic fog service provisioning
+  framework.
+\newblock {\em IEEE Internet of Things Journal}, 2019.
+
+\bibitem{zhang2017mobile}
+Ke~Zhang, Yuming Mao, Supeng Leng, Yejun He, and Yan Zhang.
+\newblock Mobile-edge computing for vehicular networks: A promising network
+  paradigm with predictive off-loading.
+\newblock {\em IEEE Vehicular Technology Magazine}, 12(2):36--44, 2017.
+
+\bibitem{zhang2014collaborative}
+Weiwen Zhang, Yonggang Wen, and Dapeng~Oliver Wu.
+\newblock Collaborative task execution in mobile cloud computing under a
+  stochastic wireless channel.
+\newblock {\em IEEE Transactions on Wireless Communications}, 14(1):81--93,
+  2014.
+
+\bibitem{zhou2021green}
+Zhenyu Zhou, Zheng Chang, and Haijun Liao.
+\newblock {\em Green Internet of Things (IoT): Energy Efficiency Perspective}.
+\newblock Springer, 2021.
+
+\bibitem{zhou2018air}
+Zhenyu Zhou, Junhao Feng, Lu~Tan, Yejun He, and Jie Gong.
+\newblock An air-ground integration approach for mobile edge computing in iot.
+\newblock {\em IEEE Communications Magazine}, 56(8):40--47, 2018.
+
+\end{thebibliography}

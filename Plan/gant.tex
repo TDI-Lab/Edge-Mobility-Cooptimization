@@ -71,29 +71,33 @@
   \ganttbar[progress=100,name=MF2G]{\textbf{2.4} Services}{6}{7} \\
   \ganttbar[progress=95,name=MF2H]{\textbf{2.5} Constants}{4}{7} \\
   \ganttbar[progress=95,name=MF2I]{\textbf{2.6} Change of Time Horizon/services/APConnections}{6}{7} \\
-  \ganttgroup[progress=0]{3 Cost}{7}{12} \\
-  \ganttbar[progress=0,name=MF3A]{\textbf{3.1} Energy}{8}{9} \\
-  \ganttbar[progress=0,name=MF3B]{\textbf{3.2} Service Delay}{8}{9} \\
-  \ganttbar[progress=0,name=MF3C]{\textbf{3.3} DLViolation}{8}{10} \\
-  \ganttbar[progress=0,name=MF3D]{\textbf{3.4} Proc Storage Deploy}{8}{9}\\
-  \ganttbar[progress=0,name=MF3E]{\textbf{3.5} CO2}{10}{11} \\
-  \ganttbar[progress=0,name=MF3F]{\textbf{3.6} Workload Balance}{10}{11}\\
-  \ganttbar[progress=0,name=MF3G]{\textbf{3.7} RN Energy}{10}{11}\\
-  \ganttbar[progress=0,name=MF3H]{\textbf{3.8} Normalization}{11}{12}\\
 
-  \ganttgroup[progress=0]{4 Placement Strategy}{13}{17} \\
-  \ganttbar[progress=0,name=MF4A]{\textbf{4.1} Plan Generation}{13}{14} \\
-  \ganttbar[progress=0,name=MF4B]{\textbf{4.1.1} Host Selection}{14}{15} \\
-  \ganttbar[progress=0,name=MF4C]{\textbf{4.1.2} Check Constraints}{13}{15} \\
-  \ganttbar[progress=0,name=MF4D]{\textbf{4.2} Run Epos}{15}{16} \\
-  \ganttbar[progress=0,name=MF4E]{\textbf{4.3} Deploy EposAnswer}{15}{17}\\
-  \ganttbar[progress=0,name=MF4F]{\textbf{4.4} Run EposAnswer}{15}{17}\\
+ \ganttgroup[progress=40]{3 Plan}{7}{8} \\
+  \ganttbar[progress=60,name=MF3A]{\textbf{3.1} Plan Generation}{7}{8} \\
+  \ganttbar[progress=70,name=MF3B]{\textbf{3.1.1} Host Selection}{7}{8} \\
+  \ganttbar[progress=0,name=MF3C]{\textbf{3.1.2} Check Constraints}{7}{8} \\
+    
+  \ganttgroup[progress=0]{4 Cost}{8}{12} \\
+  \ganttbar[progress=0,name=MF4A]{\textbf{4.1} Energy}{8}{9} \\
+  \ganttbar[progress=0,name=MF4B]{\textbf{4.2} Service Delay}{8}{9} \\
+  \ganttbar[progress=0,name=MF4C]{\textbf{4.3} DLViolation}{8}{10} \\
+  \ganttbar[progress=0,name=MF4D]{\textbf{4.4} Proc Storage Deploy}{8}{9}\\
+  \ganttbar[progress=0,name=MF4E]{\textbf{4.5} CO2}{10}{11} \\
+  \ganttbar[progress=0,name=MF4F]{\textbf{4.6} Workload Balance}{10}{11}\\
+  \ganttbar[progress=0,name=MF4G]{\textbf{4.7} RN Energy}{10}{11}\\
+  \ganttbar[progress=0,name=MF4H]{\textbf{4.8} Normalization}{11}{12}\\
 
-  \ganttgroup[progress=0]{5 Factorial Sol(Alg/Mob)}{17}{20} \\
-  \ganttbar[progress=0,name=MF5A]{\textbf{5.1} FF,EdgeWard/basic}{17}{19} \\
-  \ganttbar[progress=0,name=MF5B]{\textbf{5.2} FF,EdgeWard/balanced}{17}{19} \\
-  \ganttbar[progress=0,name=MF5C]{\textbf{5.3} EPOS/basic}{19}{20} \\
-  \ganttbar[progress=0,name=MF5D]{\textbf{5.4} EPOS/balanced}{19}{20} \\
+  \ganttgroup[progress=0]{5 Placement Strategy}{12}{15} \\
+  \ganttbar[progress=0,name=MF5A]{\textbf{5.1} Run Epos}{12}{15} \\
+  \ganttbar[progress=0,name=MF5B]{\textbf{5.2} Deploy EposAnswer}{12}{15}\\
+  \ganttbar[progress=0,name=MF5C]{\textbf{5.3} Run EposAnswer}{12}{15}\\
+  \ganttbar[progress=0,name=MF5D]{\textbf{5.4} Review}{15}{16}\\
+
+  \ganttgroup[progress=0]{6 Factorial Sol(Alg/Mob)}{17}{20} \\
+  \ganttbar[progress=0,name=MF6A]{\textbf{6.1} FF,EdgeWard/basic}{17}{19} \\
+  \ganttbar[progress=0,name=MF6B]{\textbf{6.2} FF,EdgeWard/balanced}{17}{19} \\
+  \ganttbar[progress=0,name=MF6C]{\textbf{6.3} EPOS/basic}{19}{20} \\
+  \ganttbar[progress=0,name=MF6D]{\textbf{6.4} EPOS/balanced}{19}{20} \\
 
   \ganttgroup[progress=0]{6 Evaluation}{21}{22} \\
   \ganttbar[progress=0,name=MF6A]{\textbf{6.1} Plots}{21}{22} \\

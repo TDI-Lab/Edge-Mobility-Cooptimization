@@ -1,0 +1,8 @@
+num,city,routers,backbone routers,land area (km^2),total area (km^2),sumo dimensions,Netedit dimension,#points
+0,Annapolis,5377,45,18.6,20.9,11050*7437,9580*8020,10
+1,Boulder,102,6,540.1,540.2,,,9
+2,Duluth,2893,78,175.5,226.4,,,
+3,Iowa,4116,29,64.78,65.4,,,
+4,Manhattan,382,156,59.1,87,,,
+5,Eichstaett,446,2,47.7,47.7,,,
+6,test,15,5,18.6,18.6,,,10

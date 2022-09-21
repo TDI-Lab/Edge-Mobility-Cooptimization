@@ -1,0 +1,15 @@
+##coordinates of the border points of Annapolis, Maryland, United States
+#format: X_Coordinate Y_Coordinate
+#area 25348278  total_routers = 15, backbone = 5, edge=10
+#min(x,y): 493,2060
+#max(x,y): 6400,8600
+4007.94,8546.69
+1460.41,7180.21
+867.05,6696.73
+493.46,5905.58
+889.03,4828.74
+2901.77,2296.49
+3675.33,2064.42
+5119.32,2502.77
+6357.03,3224.77
+6047.60,6344.81

@@ -1,0 +1,14 @@
+#coordinates of the border points of Boulder, Nevada, United States
+#format: X_Coordinate, Y_Coordinate
+#area: 
+#max x, y
+#13400, 18200
+2111.48,18168.82
+34.80,10841.64
+740.09,4376.47
+7871.36,1672.86
+10222.33,9078.41
+8304.44,11278.83
+13472.61,11607.71
+12861.82,16775.88
+8492.37,13017.21

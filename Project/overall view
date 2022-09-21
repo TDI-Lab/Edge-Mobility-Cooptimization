@@ -1,0 +1,268 @@
+This project consists of several works written in java as follows. The first three ones can be run using their main class.
+
+*******************************************************************************
+1. CaidaProcessor 
+
+preprocesses Internet dataset from Caida Internet Topology Data and generates corresponding data for a specific continent, country, state, and city.
+ * Caida files along with their format can be found on the following web page: 
+ * https://www.caida.org/data/internet-topology-data-kit/release-2019-04.xml 
+ 
+ Munich
+		  input files:		C:\\Users\\rooyesh\\eclipse-workspace\\CaidaProcessor1\\Caida\\src\\
+		  output files:   	C:\\Users\\rooyesh\\eclipse-workspace\\CaidaProcessor1\\Caida\\eu.de.mu\\
+*******************************************************************************
+2. emufog: 
+  
+  output analysis: https://github.com/emufog/emufog/issues/23 
+						  Nodes starting with an s are switches and part of the backbone. 
+						  Nodes starting with an h are hosts. Consider them the edge devices. 
+						  And there are nodes with r. Those are routers and part of the edge of the network. 
+						  Be aware that not all of them run as a fog node. Some have a docker container associated some not.
+  
+  how to run:
+  cmd in bin folder: C:\Users\rooyesh\Downloads\Compressed\emufog_2\emufog\bin
+  emufog -c example-config.yaml -t caida -f topo.links -f topo.nodes.as -f topo.nodes.geo -o out.py
+  OsmAndPcap: to enumerate the number of Edge, Core routers in the out.py file
+  
+  
+Munich
+
+			input: 	474 nodes
+			output: 154 backbone/switches . 153 hosts for iot devices
+					319 edge router = AP
+					595 links
+********************************************************************************
+3. MapView
+
+this program generates the map of an area (currently Munich) using boundary Geo-coordinate points as a polygon from OpenStreetMap (available at https://www.openstreetmap.org/),
+ SUMO (Simulation of Urban MObility available at https://www.eclipse.org/sumo/), and GoogleMap. 
+ 
+	map selection/download:
+		1. goto C:\Program Files (x86)\Eclipse\Sumo\tools
+		2. in cmd: python osmWebWizard.py
+		3. download desired map
+		4. https://sumo.dlr.de/docs/Tutorials/OSMWebWizard.html
+	
+ the position of geo-coordinate points (e.g., Backbone and Edge routers, AP) extracted from Caida files (the output of CaidaProcessor program) are represented on the area. 
+ the geo-position of the APs which are inside the selected area of a city is written to the output directory.
+
+Munich
+		Currently shows the location of (468)Access Points + (4/5 cloud)core routers and their connections in a (7)km2 area
+		output: H:\project2\topology\Munich-BS
+				C:\Users\rooyesh\eclipse-workspace\MapView\BS\MunichGeoSelectedAP.csv
+				C:\Users\rooyesh\eclipse-workspace\MapView\src\main\java\edge\epos\map\GeoPointsMunichSmallLatency: 
+ 				C:\Users\rooyesh\eclipse-workspace\MapView\map\Munich
+ 				
+ The distances between nodes and shortest paths for calculating latency is done using this file and the output files are saved in the
+ BS directory named CloudletPathLentgh, CloudletAdjacency 
+
+
+********************************************************************************
+4. Points and border locations as input to MobFogSim:
+
+Conversion of geo-locations to Cartesian with respect to the borders of a city:
+I recommend to make the network smaller based on the border nodes then convert the coordinates to make the program more efficient.
+
+C:\Program Files (x86)\Eclipse\Sumo\tools\sumolib
+https://sumo.dlr.de/docs/Geo-Coordinates.html
+https://sumo.dlr.de/docs/Tools/Sumolib.html#coordinate_transformations
+	
+	pip install pyproj==1.9.6
+	run in cmd: python geo2cart.py
+	input files		 H:\project2\geo2cart\7Area
+	output files	 H:\project2\geo2cart\output
+	
+Note that after the conversion some nodes might be out of the selected area. Hence must upddate the input files 
+after running the main program and distinguishing the outside points. the following points have been removed with regards of this refinement.
+The csv files at the H:\project2\geo2cart and main program directory are updated ones.
+Edge router 50 13872 15618 is outside the selected area
+Edge router 103 13626 15608 is outside the selected area
+Edge router 174 13481 14590 is outside the selected area
+Edge router 436 13472 14315 is outside the selected area
+
+***************************************************************************
+Two above programs prepare input data for our main program. Some files of the main program have been added to the rar directory named in_progress_work.
+Sumo simulations downloaded from OSM:
+C:\Users\rooyesh\sumo
+********************************************************************************
+
+5. Sumo
+sample file: C:\Users\rooyesh\sumo\osmDownload
+	1. download a .osm file from https://www.openstreetmap.org/export#map=15/48.1370/11.5762 using export/manually
+				or using osmWebWizard located in C:\Program Files (x86)\Eclipse\Sumo\tools\
+	2. open it with josm.jar for modification
+	3. simulation generation:
+				open cmd:  	
+					netconvert --osm-files *.osm --outputfile *.net.xml  or   netconvert --osm *.osm -o map.net.xml
+					randomTrips.py -n *.net.xml -e 1000 -o *.trips.xml --validation
+					duarouter -n *.net.xml --route-files *.trips.xml -o *.rou.xml --ignore-errors
+	4. conversion xml output to csv: https://sumo.dlr.de/docs/Tools/Xml.html#xml2csvpy
+		go to  C:\Program Files (x86)\Eclipse\Sumo\tools\xml, C:\Program Files (x86)\Eclipse\Sumo\data\xsd
+		python xml2csv.py --options D:\\osm.out
+		xml2csv.py --xsd %SUMO_HOME%\data\xsd\tripinfo_file.xsd --validation tripinfo.xml "--separator=','"
+
+
+***********************************************************************************
+5. Trapp 
+
+	installation and run:
+		1. python 2.7 for windows 7 32 bit
+		2. add path to scripts folder in python installed folder (for pip):
+			echo %path%
+			set PATH=%PATH%;C:\Python27\Scripts	
+			pip install --upgrade pip
+		3. in trapp-master: (H:\project2\TRAPP-master\)
+							1. python setup.py installation
+							2. pip install numpy nad Dijkestar and ...
+							3. pip upgrade
+							4. pip install matplotlib
+		4.  in trapp-master: update three paths in app/Config.py:
+							epos_jar_path
+							sumoConfig
+							sumoNet
+		5.  in trapp-master: update map2/city.sumo.cfg: <output>
+															<fcd-output value="osm.out2" />
+														</output>
+		6. python run.py
+		7. go to C:\Program Files (x86)\Eclipse\Sumo\tools\xml:  python xml2csv.py osm.out2
+		9. to see the output file easier by limiting number of lines to show use the following command in cmd: more /e osm.out2 (or the resulted csv file) p 10
+		FCD-output can be obtained in geo-coordinates by adding the option --fcd-output.geo
+
+********************************************************************************
+
+6. main program: G:\MobFogSim-master\MobFogSim-master\src\EdgeEPOS
+
+Change all other packages in mobfosim to the original one
+
+At the moment back-routers = core-routers + one cloud node (the last core router) 
+Total resources available: 
+			CPU: 515964.00 Memory: 1015759765031.00 Storage: 96400000000000.00
+
+Total resource demands: profile 0,1,2,3 
+			CPU: 321.8265760777523 Memory: 265.0 Storage: 576.0
+********************************************************************************
+
+7. Vehicle mobility
+	mobility format for simulation:  	time-stamp (second), angle, x, y, speed
+	fcd-output conforms this format
+
+****************************************************************************
+8. getting routes for specific source&destination pairs:
+40598 vehicles in OD file of Munich
+The initial files are for 08:00 to 09:00 and located at H:\project2\TRAPP-master\Munich.
+I changed them from 0:00 to 01:00.
+
+	1. modify OD_8-9_input.od with desired begin/end time based on hour.minute format.
+	2. create od2trips.config.xml
+	3. in CMD: inside "H:\project2\TRAPP-master\app\map" using traffic assignment zone (TAZ) file:
+		od2trips -c od2trips.config.xml -n myTaZes.taz.xml -d OD_8-9_input.od -o od_file.odtrips.xml
+	4. create trips2routs.duarcfg.xml
+	5. in CMD: duarouter -c trips2routs.duarcfg.xml -o od_file.rou.xml (default: Shortest Path for each trip)
+	6. modify sumo.cfg with newly created files
+			do not need:
+			<gui-settings-file value="Munich_MR_Fixed_TLS_v101.settings.xml"/>
+			<additional-files value="myTaZes.taz.xml"/>
+**************************************************************************
+
+9. OsmAndPcap: 
+This program measures the input workload to our munich area and also generates the baseline vehicle mobility files from the output of sumo.
+We have chosen an area of about 7 square kilometers of Munich to conduct our experiments. 
+This area is shown in figure.1 and has the following specifications:
+
+Area in meters: 6965935
+Dimensions: 2101.9845322666083 3313.979916038261
+Geo-coordinates of the selected area:
+	48.15349651908926, 11.55253802313708
+	48.141762489129114, 11.553338624654408
+	48.14137676070253, 11.581085029251437
+	48.154104268437294, 11.581277712616693
+Corresponding Cartesian-coordinates:
+	13409.8482178,15586.5561306
+	13512.6595961,14284.3984911
+	15577.9967522,14310.4996885
+	15544.7799316,15725.4460112
+
+Then we determined the number of mobile base stations (LTE Cell Tower) located in this area using 
+the available data sets on OpenCellID, whose positions are shown in the figure.2 using yellow marks.
+Total LTE Cell Tower in this area are 468. We name this stations as access points (AP) in plots.
+
+In the next step, vehicle trips are generated using the OD file, that we received from you, and the Sumo simulator. 
+These trips are produced using the shortest routes from source TAZ to destination TAZ for each car. The trips are for 
+a 1-hour interval from 8:00 to 9:00.
+
+Next, we connect each car to its nearest base station at each step (time stamp in terms of second) of its journey. 
+ 
+Some plots are generated from our investigation on our test area of Munich that are attached to this report, and here are some measurements:
+	Total Travel Time of All Vehicles: 2789371.0 second
+	Total number of Vehicles which cross our selected area from 8:00 to 9:00 : 5946
+	Mean Travel Time of all vehicles: 469.19613120269133
+	Max number of vehicles connected to one APs for all TimeStamps: 68
+	Max distance between APs and Vehicles during the whole simulation: 218.9290647675643
+	
+	Last run:
+	Sum of Travel Time of All Vehicles: 2789371.0
+	Number of Vehicles: 5945 size 5946
+	Mean Travel Time: 469.19613120269133
+	Num of vehicles: 5946
+	Max distance between APs and Vehicles during the whole simulation: 218.9290647675643
+
+
+output files:
+	H:\\project2\\MyPlots\\1hour-workload
+****************************************************************************	
+Munich city center: 
+	8.135695, 11.577136
+	15534.16, 13592.97
+	
+		/*     
+        * method 2. Edge-aware vehicle routing
+        *  - create two new routers for SUMO (see papers above) that are aware of the baseline and
+        *   optimized quality of service experience on the edge. 
+        *   Compare the performance of the router with and without EPOS traffic optimization. 
+        */
+       
+       	/*
+        * method 1. Mobility-aware service placement on the edge
+        *  - use the optimized routes by EPOS to optimize service placement with EPOS.
+        *   Compare the baseline (edge-ward) and optimized service placement under baseline mobility and optimized mobility
+        */
+              
+		
+		
+I think it is in degrees of latitude which means that the radius value of 1.0 degree corresponds to 111 km. 
+I drew a circle on the map with the radius of 0.01, captured geo-coordinates of the center of the circle and 
+a point on the circumference and the distance came to .69 mile which is 1.11 km. 
+
+sample codes:osmandpcap 
+
+javadoc comment: Alt + shift + j
+
+
+String basePath = new File("").getAbsolutePath();
+	    System.out.println(basePath);
+	    String path = new File("src/main/java/target").getAbsolutePath();
+	    System.out.println(path);
+		
+		
+
+Collapse all code blocks: CTRL + SHIFT + NUMPAD_DIVIDE
+
+addresses with space in cmd: use "" around the add
+cd /d 
+
+github: Znbne , znb8450525 
+
+arrivalInstructionsFog[a][j] = L_P[a] * method.traffic.lambda_in[a][j] * x[a][j]
+
+lambda = request/second
+//Collections.sort
+
+getDeviceById
+files to check:
+minmax
+distance
+coordinate
+
+13975 14485
+13694 13792
+13689 13944

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.12.23)  11 SEP 2022 19:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.12.23)  21 SEP 2022 11:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -523,31 +523,26 @@ LaTeX Font Warning: Font shape `OT1/cmr/mc/n' undefined
 
 [1
 
-{c:/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 115.
- [2]
-(./gant.aux)
+{c:/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./gant.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 14748 strings out of 480608
- 313726 string characters out of 5907535
- 601926 words of memory out of 5000000
- 30388 multiletter control sequences out of 15000+600000
- 548275 words of font info for 43 fonts, out of 8000000 for 9000
+ 14674 strings out of 480608
+ 312350 string characters out of 5907535
+ 604456 words of memory out of 5000000
+ 30318 multiletter control sequences out of 15000+600000
+ 544138 words of font info for 39 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,8n,75p,410b,877s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2020/texm
 f-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2020/texmf-dist/fonts/ty
-pe1/urw/helvetic/uhvr8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/helveti
-c/uhvro8a.pfb>
-Output written on gant.pdf (2 pages, 34381 bytes).
+pe1/urw/helvetic/uhvr8a.pfb>
+Output written on gant.pdf (1 page, 28189 bytes).
 PDF statistics:
- 27 PDF objects out of 1000 (max. 8388607)
- 19 compressed objects within 1 object stream
+ 20 PDF objects out of 1000 (max. 8388607)
+ 14 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

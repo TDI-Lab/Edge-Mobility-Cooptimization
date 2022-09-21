@@ -22,7 +22,7 @@
     canvas/.append style={fill=none, draw=black!5, line width=.75pt},
     hgrid style/.style={draw=black!5, line width=.75pt},
     vgrid={*1{draw=black!5, line width=.75pt}},
-    today=6,
+    today=7,
     today rule/.style={
       draw=black!64,
       dash pattern=on 3.5pt off 4.5pt,
@@ -58,8 +58,8 @@
   \ganttbar[progress=100,name=MF1B]{\textbf{1.2} Configuration}{2}{3} \\
   \ganttbar[progress=100,name=MF1C]{\textbf{1.3} Creation}{2}{4} \\
    \\[grid] 
-  \ganttgroup[progress=80]{2 Setting/Input}{4}{7} \\
-  \ganttbar[progress=90,name=MF2B]{\textbf{2.1} Network}{4}{6} \\
+  \ganttgroup[progress=95]{2 Setting/Input}{4}{7} \\
+  \ganttbar[progress=95,name=MF2B]{\textbf{2.1} Network}{4}{6} \\
   \ganttbar[progress=100,name=MF2C]{\textbf{2.1.1} Nodes (AP,Routers,Cloudlets Cloud,Broker)}{4}{5} \\
   \ganttbar[progress=100,name=MF2E]{\textbf{2.1.2} Vehicles}{5}{6} \\
   \ganttbar[progress=95,name=MF2D]{\textbf{2.1.3} Cloudlet Connections}{5}{6} \\
@@ -67,10 +67,10 @@
   \ganttbar[progress=100,name=MF2E]{\textbf{2.1.3} CloudletToAP Connections}{5}{6} \\
   \ganttbar[progress=100,name=MF2E]{\textbf{2.1.4} CloudletToVehicle Connections}{5}{6} \\
   \ganttbar[progress=100,name=MF2F]{\textbf{2.2} Agent Creation}{5}{6} \\
-  \ganttbar[progress=10,name=MF2F]{\textbf{2.3} Workload}{6}{7} \\
-  \ganttbar[progress=10,name=MF2G]{\textbf{2.4} Services}{6}{7} \\
-  \ganttbar[progress=80,name=MF2H]{\textbf{2.5} Constants}{4}{7} \\
-  
+  \ganttbar[progress=90,name=MF2F]{\textbf{2.3} Workload}{6}{7} \\
+  \ganttbar[progress=100,name=MF2G]{\textbf{2.4} Services}{6}{7} \\
+  \ganttbar[progress=95,name=MF2H]{\textbf{2.5} Constants}{4}{7} \\
+  \ganttbar[progress=95,name=MF2I]{\textbf{2.6} Change of Time Horizon/services/APConnections}{6}{7} \\
   \ganttgroup[progress=0]{3 Cost}{7}{12} \\
   \ganttbar[progress=0,name=MF3A]{\textbf{3.1} Energy}{8}{9} \\
   \ganttbar[progress=0,name=MF3B]{\textbf{3.2} Service Delay}{8}{9} \\
@@ -106,16 +106,6 @@
 %
 % A simpler example from the package documentation:
 %
-\begin{ganttchart}{1}{12}
-  \gantttitle{2011}{12} \\
-  \gantttitlelist{1,...,12}{1} \\
-  \ganttgroup{Group 1}{1}{7} \\
-  \ganttbar{Task 1}{1}{2} \\
-  \ganttlinkedbar{Task 2}{3}{7} \ganttnewline
-  \ganttmilestone{Milestone}{7} \ganttnewline
-  \ganttbar{Final Task}{8}{12}
-  \ganttlink{elem2}{elem3}
-  \ganttlink{elem3}{elem4}
-\end{ganttchart}
+
 
 \end{document}

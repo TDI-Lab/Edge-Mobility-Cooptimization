@@ -1,0 +1,41 @@
+experiment 1:
+traffic-pattern:
+2 days - 48 hours traffic :15 minutes 
+48*4 = 192
+normalized ->   trafficPerNodePerService -> *numServices -> distribute over all nodes
+so to plot the traffic firstly must normalize the input traffic and then multiply it in numServices and then plot it.
+total_run= trace_size = 191
+
+
+one value of array: trafficPerNodePerService
+Distributes the given traffic that is for one service on one node randomly to the global traffic
+
+totalTraffic = trafficPerNodePerService * Parameters.numFogNodes * Parameters.numServices;
+
+targetTraffic[a][j] = totalTraffic * Parameters.ServiceTrafficPercentage[a] * nodeTrafficPercentage[j]
+
+
+
+
+
+
+experiment 2:
+trace-combined-apps.txt
+Contains the input traffic over each fog node (numbered from 0 to 9) during 1 minute time periods.
+It covers 4 hours.
+
+2 hours (12:00PM-2:00PM) of trace data of 2017/04/12. The interval of traffic change is 1 minute 
+tau is set to 2 minutes/120s.
+240 run  15 second
+arraylist (array double[]) -> normalize -> distribute according to service rate
+
+experiment 3:
+trace-combined-apps.txt 
+total trace :4 hours
+The interval of the traffic change and tau are 10 seconds.
+
+trace-combined-apps-6sec:
+Contains the input traffic over each fog node (numbered from 0 to 9) during 6 second time periods.
+24000/10 (node) = 2400
+60*4*10 = 2400
+It covers 4 hours.

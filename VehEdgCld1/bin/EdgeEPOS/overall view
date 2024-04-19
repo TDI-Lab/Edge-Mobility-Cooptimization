@@ -1,0 +1,509 @@
+MOBILEEDGEEPOS: This project consists of several works written in java as follows. 
+
+Paper
+			Paper review: pictures, table params (values, units, symbol) 
+			Implementation parameters
+			Problem formulation
+			Solve the optimization problem
+
+
+Implementation
+
+			The programs are run on Old Server + Server 152
+			Steps:
+			
+			Initial step: identify your city for tests and download its map.
+			1. Create City and with BSs and Core routers (Emufog, Caida). The coordinates must be in the form of Cartesian not Geo-location
+				1. Extract the number of core routers in your area from Caida and Emufog
+				   Extract the location of backbone routers from Munich Scientific Internet backbone, literature:
+					
+				2. Download OpenCellId dataset. Extract the cell sectors (BS) in your interested area (MapView)
+					Connect the BSs and backbone routers, calculate their shortest paths using Dijkestra
+					
+				3. Convert the output from Geo-coordinate to Cartesian locations based on the Munich transport network (Geo2Cart)
+			
+			2. Mobility datasets in the input directory (Sumo, SumoTools for ODmatrix, SumoMobilityPreProcessor), The format: timestep (second), angle, xCoordinate, yCoodrinate, speed
+						1. Sumo-default mobility
+						2. Analytically optimized mobility
+						3. Analytically optimized with marginal cost mobility (not included now)
+						4. Balanced from Trapp
+				Generate traffic scenarios from Manos files
+				Run Sumo with generated scenarios
+				Analyse the output, extract mobility profiles
+				Coverage range: 500, 700, 1000, 2000, 3000
+			
+			3. Input Config.json (Border), MobilityDataset, EdgeCoreRouters, pathlength, core routers
+			4. Create City and all devices including AP, Core routers, Fog nodes (cloudlet), Cloud, Vehicles, Brokers
+			5. Configure the network topology and connections
+			6. Create agents and connect them to fog nodes
+			7. Create workload, distribute the load on the vehicles
+					1. Mawi
+					2. From Camera
+					3. traffic plots are available at E:\project2\MyPlots\traffic
+			8. Create service placement strategy (normalization)
+					Local cost
+					Global cost
+			9. Implement the placement strategy in ifogsim
+			10. Starts the simulation on server
+			11. Evaluation
+			12. Develop baseline algorithms (Edgeward/FirstFit)+ basic/balanced algorithm
+
+ 
+*******************************************************************************
+Initial step
+			
+	For map you can use 
+		1. OpenStreetMap: download a .osm file from https://www.openstreetmap.org/export#map=15/48.1370/11.5762 using export/manually
+		
+		2. SUMO (Simulation of Urban MObility available at https://www.eclipse.org/sumo/ using a download web wizard script (osmWebWizard) located in C:\Program Files (x86)\Eclipse\Sumo\tools\, explained below
+		3. GoogleMap
+		 
+		2. Map selection/download (https://sumo.dlr.de/docs/Tutorials/OSMWebWizard.html):
+				1. Go to C:\Program Files (x86)\Eclipse\Sumo\tools
+				2. Run the script osmWebWizard.py
+				3. Or, in cmd navigate to the mentioned tools directory, Run: python osmWebWizard.py
+				4. Select the intended part of the shown map, download it
+		3. open the map with josm.jar for modification
+				
+		Munich city: our test map is available in E:\project2\TRAPP-master\app\map-munich - Copy
+	
+*******************************************************************************
+1. Caida
+
+	Processes Internet dataset from Caida Internet Topology and filter out the routers (nodes) and their links which fall out of a specific city (using the hierarchy continent, country, state).
+	 * Caida files along with their format can be found on the following web page: 
+	 * https://www.caida.org/data/internet-topology-data-kit/release-2019-04.xml 
+	
+	The data for Munich (output): C:\Users\znb_n\eclipse-workspace\Caida\files
+	Current correct input params: D:\input C:\Users\znb_n\eclipse-workspace\Caida\files\output\test\ 2 "Europe" "Germany" "Bavaria" "Munich"		  
+	check if it works properly, on the desktop of the old machine there is an stable version. 
+	
+*******************************************************************************
+2. Emufog
+
+	Gets the output of Caida (three dataset files) as its input and generates a topology with the nodes and links. As a result 
+	the number of edge/backbone routers are identified. 
+	  
+	How to run:
+		  Put the input files in C:\Users\znb_n\eclipse-workspace\emufog_2\emufog\bin
+		  In cmd, navigate to the bin folder: C:\Users\rooyesh\Downloads\Compressed\emufog_2\emufog\bin
+		  Run the command:
+		  				.\emufog -c example-config.yaml -t caida -f topo.links -f topo.nodes.as -f topo.nodes.geo -o out.py
+		  Use the output of emufog cmd and EmuProcess to enumerate the number of Edge, Core routers in the out.py file
+	  
+	For issues refer to the following link:
+		output analysis: https://github.com/emufog/emufog/issues/23 
+					  Nodes starting with an s are switches and part of the backbone. 
+					  Nodes starting with an h are hosts. Consider them the edge devices. 
+					  And there are nodes with r. Those are routers and part of the edge of the network. 
+					  Be aware that not all of them run as a fog node. Some have a docker container associated some not.
+	
+	Output of EMUFog for Munich
+				input: 	474 nodes
+				output: 154 backbone/switches 
+		
+	Use the population/area of Munich to find the number of core routers in a specific part of Munich based on the literature:
+	The Number of core routers is extracted from caida proportionally to the population of the city (according to the literature papers)
+	The position of Backbone routers comes from the current scientific backbone of Munich.
+	
+	
+********************************************************************************
+3. MapView
+
+	This program generates an online map for an area (currently Munich) using (city border Geo-points, core routers' Geo-location + cell sectors' Geo-location)
+	The map is constructed (downloaded online) in a rectangle shape with 4 vertices.
+	Then it identify the included LTE cell sectors and base stations in the area. If LTE, shift the CellID right by 8 bits to extract eNB.
+	Connects the base stations to their closest input core router. Calculates their distance.
+	Calculates the distance between every two routers in the area in the form of a matrix.
+	Up until now all the measurements and locations are based on Geo-coordinates.
+	OpenCellid dataset format:
+	Radio: The generation of broadband cellular network technology
+	MCC: Mobile Country Code
+	Net: Mobile Network Code
+	Area: Location Area Code (LAC)
+	Cell: Cell tower code (CID)
+	lat, long: Approx coordinates of the cell tower
+	range: Approximate area within which the cell could be. (radius in meters)
+	samples: No of measures processed to get this data
+	changeble:
+	
+	1 = The location is determined by processing samples
+	0 = We got the location directly from the telecom firm
+	created: When the cell was first added to database (UNIX timestamp)
+	updated: When the cell was last seen (UNIX timestamp)
+	More info:
+		https://community.opencellid.org/t/how-to-add-bts-in-database/285/7
+		https://community.opencellid.org/t/documenting-the-columns-in-the-downloadable-cells-database-csv/186/14https://community.opencellid.org/t/cid-data-for-cdma/275
+	
+	
+	Preparation:
+		1. Download the dataset of a specific type of cell sectors (in our case LTE) in a country of your interest from  https://www.opencellid.org/#zoom=16&lat=37.77889&lon=-122.41942.
+		You need to register on the website and obtain a token to do so.
+		The dataset for Germany is available in C:\Users\znb_n\eclipse-workspace\MapView\BS\GermanyAP.csv
+		We processed (using Munich area code) the dataset and only keeps the Munich part in BS\MunichGeoBS.csv to use for further processing.
+	
+		2. Input datasets are available in C:\Users\znb_n\eclipse-workspace\MapView\BS
+		Including:
+					CityGeoBorderPoints = "BS\MunichGeoBorderPoints.txt";
+					munichGeoCellSectorFile = "BS\MunichGeoBS.csv";//geo locations of LTE cell sectors in Munich
+					munichGeoCorerouterFile = "BS\MunichGeoCore.csv";//geo location of core routers
+					
+		3. Run MapView
+		3. Output files are the cell sectors and BSs in the interested area and the path length between them as follows:
+					adjacencyMXFile = "BS\CloudletAdjacency.txt"; 
+					selectedGeoCellSectorFile = "BS\MunichGeoSelectedAP.csv";//geo location of cell sectors: cell type, id, Geo(x, y)
+					munichGeoBSsFile = "BS\MunichGeoSelectedAPeNB.csv";//geo location of BSs
+					routerPathLenFile = "BS\CloudletPathLentgh.csv"; //path length between routers
+				
+		Output investigation:
+			Currently shows the location of (109) Access Points + (4/5 cloud) core routers and their connections in the (7)km2 downtown area
+			Number of BSs in the area is 110 from which one is actually out of the area and we removed it manually (row number 12881 in MunichGeoBS.csv) from input files.
+			The distances (in meter) between BSs/nodes and shortest paths for calculating latency is done and saved in the
+	 		BS directory named CloudletPathLentgh, CloudletAdjacency.
+	 				
+Test Area: 
+	We have chosen an area of about 7 squared km of Munich to conduct our experiments. 
+	The area specifications: 
+	
+	Munich city center: 48.136867, 11.575589
+	
+	Area in meters: 6965935
+	Dimensions: 2101.9845322666083 3313.979916038261
+	core routers:
+	 		 /*
+			  * 4     
+			  * 
+			  * 	2     1
+			  * 			
+			  * 		  3
+			  * 
+			  */
+The output here are ready for next step of converting Geo-locations to Cartesian ones in relation to the Munich transport network.
+The pictures of network setting is available in C:\Users\znb_n\eclipse-workspace\MapView\map-photo\Munich\final
+
+********************************************************************************
+4. Convert the border and Core/Edge routers' Geo-points to Cartesian locations for giving as input to MobFogSim:
+	1. Copy output of MapView files from C:\Users\znb_n\eclipse-workspace\MapView\BS to C:\Users\znb_n\eclipse-workspace\MapView\geo2cart\7Area
+	Remember to copy the BS's id and number of sector columns from Geo file to its corresponding cart file after conversion; might be needed in the future.
+	The conversion is done in relation to the transport network of a city, Munich, using the following lib:
+
+		C:\Program Files (x86)\Eclipse\Sumo\tools\sumolib
+		More info: https://sumo.dlr.de/docs/Geo-Coordinates.html,https://sumo.dlr.de/docs/Tools/Sumolib.html#coordinate_transformations)
+	2. In CMD:
+		pip install pyproj==1.9.6
+		Navigate to C:\Users\znb_n\eclipse-workspace\MapView\geo2cart\7Area
+		python geo2cart.py (this is a python script that converts the coordinates)
+		input files		 H:\project2\geo2cart\7Area
+		output files	 H:\project2\geo2cart\7Area
+	
+Note that after the conversion some nodes might be out of the selected area still. Hence Check it carefully.
+The conversion only moves the coordinates, not the other info. Simply copy them (from original file) and paste in your target file.
+
+*****************************************************************
+5. Generate traffic scenarios (original Munich files: E:\project2\Munich, E:\project2\TRAPP-master\app\map-munich - Copy, E:\sumo-scenarios\FinalResults-10800TS/OsmRouterSumoMobilityPreprocessor)
+			
+		To convert the downloaded .osm file to sumo network:
+				netconvert --osm-files *.osm --outputfile *.net.xml  or   netconvert --osm *.osm -o map.net.xml
+		To generate random traffic scenario:
+				randomTrips.py -n *.net.xml -e 1000 -o *.trips.xml --validation
+			
+	Generate Traffic from Manos files  	
+			To generate traffic from ODmatrix (routes for specific source&destination pairs) with different routing algorithms:
+				40598 vehicles in OD file of Munich. The initial files are for 08:00 to 09:00 and located at H:\project2\TRAPP-master\Munich.
+				I changed them from 0:00 to 01:00.
+				
+			Default scenario (SPT):
+				1. modify OD_8-9_input.od with desired begin/end time based on hour.minute format.
+				2. create od2trips.config.xml
+				3. in CMD: inside "H:\project2\TRAPP-master\app\map" using traffic assignment zone (TAZ) file:
+					od2trips -c od2trips.config.xml -n myTaZes.taz.xml -d OD_8-9_input.od -o od_file.odtrips.xml
+				4. create trips2routs.duarcfg.xml
+				5. in CMD: duarouter -c trips2routs.duarcfg.xml -o od_file.rou.xml (default: Shortest Path for each trip)
+				6. modify sumo.cfg with newly created files
+				   
+						<gui-settings-file value="Munich_MR_Fixed_TLS_v101.settings.xml"/>
+						<route-files value="od_file.rou.xml"/>
+						<output>
+							<fcd-output value="osm-default.out" />
+						</output>
+				7. Run Sumo with the generated scenario
+				
+				
+			Analytical scenario: take into account travel times in a traffic-loaded network
+					1. duarouter -n *.net.xml --route-files *.trips.xml -o *.rou.xml --ignore-errors
+						sample: duarouter -n shengzhentest.net.xml -r shengzhen.trips.xml -o tmp.rou.xml -a .add.xml --ignore-errors
+					2. /usr/share/sumo/tools/purgatory/route2trips.py tmp.rou.xml > .trips.xml
+					3. /usr/share/sumo/tools/assign/duaIterate.py -n .net.xml -t .trips.xml -l 10
+						on the server: 	nohup python2.7 /usr/share/sumo/tools/assign/duaIterate.py -n munich.net.xml -t od_file.trps.xml -l 10 &> terminal.txt &
+						according to the specified number of iterations the script runs for 10 times each run has an output directory.
+					4. modify sumo.cfg with newly created files
+								
+							<gui-settings-file value="Munich_MR_Fixed_TLS_v101.settings.xml"/>
+							<route-files value="od_file.odtrips_009.rou.xml"/>
+							<output>
+								<fcd-output value="osm-analytics.out" />
+							</output>
+							
+					5. Run Sumo with the generated scenario
+
+
+			Analytical with Marginal Cost 
+				In this scenario apart from the iterations and generating the dynamic traffic, Marginal Cost4 is also considered in route generations. 
+				Use the following command in CMD:
+				1. duaIterate.py -n .net.xml -t  sumo.trips.xml -l 10 --marginal-cost 
+				2. modify sumo.cfg with newly created files
+								
+							<gui-settings-file value="Munich_MR_Fixed_TLS_v101.settings.xml"/>
+							<route-files value="od_file.odtrips_009.rou.xml"/>
+							<output>
+								<fcd-output value="osm-analyticMG.out" />
+							</output>
+							
+				3. Run Sumo with the generated scenario
+ 
+ 
+	The output 
+		As identified in the input files of SumoMobilityPreprocessor, the output (.csv and route files) of running the mentioned algorithms are available on the server 152 at /home/zeinab/sumo-manos/10800-3000/
+ 
+More info:
+		https://sumo.dlr.de/docs/Demand/Importing_O/D_Matrices.html
+		name/id of edges: netedit --> open network
+		point of interest:
+		https://sumo.dlr.de/docs/Simulation/Shapes.html
+		For edge occupancy:
+		https://sumo.dlr.de/docs/Simulation/Output/Lane-_or_Edge-based_Traffic_Measures.html#:~:text=The%20following%20measurements%20can%20be,)%20%3D%20speed%20*%203.6%20*%20density
+		https://sumo.dlr.de/docs/sumo.html#mesoscopic
+		https://sumo.dlr.de/docs/Simulation/Meso.html
+		https://sumo.dlr.de/docs/Simulation/Output/Lane-_or_Edge-based_Traffic_Measures.html
+		https://sumo.dlr.de/docs/TraCI/POI_Value_Retrieval.html
+		https://sumo.dlr.de/docs/Tools/Sumolib.html#locate_nearby_edges_based_on_the_geo-coordinate
+
+******************************************************************
+6. Conversion .out SUMO output to .csv: 
+		https://sumo.dlr.de/docs/Tools/Xml.html#xml2csvpy
+		In CMD
+			Navigate to C:\Program Files (x86)\Eclipse\Sumo\tools\xml
+			Run: python xml2csv.py D:\\osm.out
+			or python "C:\Program Files (x86)\Eclipse\Sumo\tools\xml\xml2csy.py" osm.out
+		
+		If face error just run it again, other options (a high memory space is important):
+			The script can be run using --options and also	C:\Program Files (x86)\Eclipse\Sumo\data\xsd
+			xml2csv.py --xsd %SUMO_HOME%\data\xsd\tripinfo_file.xsd --validation tripinfo.xml "--separator=','"
+
+******************************************************************
+7. SumoMobilityPreprocessor
+	
+		This program is a FCD format sumo (.csv) output processor that is run on the server 77.68.98.152. 
+		It receives the SUMO simulation output file and extracts the mobility profiles for vehicles. 
+		In addition, it analyses the output, and generates useful insights about the traffic flow together with 
+		the point of interest file with the total load on every base station for demonstration in SUMO. 
+		Coverage ranges are: 500, 700, 1000, 2000, 3000
+				
+	 input 
+	 		big files are available in the /home/zeinab/sumo-manos/10800-3000/{Default, Analytics,..}/sumo-out.csv directory on the server.
+			and BSs file in /home/zeinab/sumo-manos/MunichCartSelectedAPeNB.csv
+					 
+	 output files are available in 
+		 /home/zeinab/sumo-manos/10800/ on the server
+		 E:\sumo-scenarios\10800-109AP\ on Dell laptop
+		 
+		 One directory for each coverage range including:
+			 one directory named "vehiclesWithAP/" containing the .csv mobility profiles for all the vehicles passing through the Munich interested area once. 
+			 in addition, the following output files are also generated:
+						  "UnsortedVehPerAPPerTS.dat"
+						  "SortedVehPerAPPerTS.dat"
+						  "VehiclesInSelectedAreaWithAP.csv"
+						  "VehvsTS.dat"
+						  "UnsortedVehPerAP.dat"
+						  "SortedVehPerAP.dat"
+						  "VehTravels.dat"
+						  "VehTravels.csv"
+						  "poi.xml"
+						  
+The plots are drawn from the measurements and available in E:\sumo-scenarios\10800-109AP\{Default,Analytics}\{500,700,1000,2000,3000}
+In addition, By addressing the poi.xml files in sumo.cfg file and opening it in sumo the total load distribution is demonstrated across the network. The 
+output of this is available in C:\Users\znb_n\eclipse-workspace\MapView\map-photo\Munich\final
+
+****************************************MobFogSim****************************************
+Mobfogsim
+ Github repo: https://github.com/diogomg/MobFogSim/blob/master/src/org/fog/vmmobile/AppExample.java for more info
+
+	/*  Example parameters
+		 *  
+		 *  1 290538 0 0 1 11 0 0 0 61
+		 *  
+		 *  First parameter: 0/1 -> migrations are denied or allowed
+		 *  Second parameter: Positive Integer -> seed to be used in the random numbers generation
+		 *  Third parameter: 0/1 -> Migration point approach is fixed (0) or based on the user speed (1)
+		 *  Fourth parameter: 0/1/2 -> Migration strategy approach is based on the lowest latency (0), lowest distance between the user and cloudlet (1), or lowest distance between user and Access Point (2)
+		 *  Fifth parameter: Positive Integer -> Number of users
+		 *  Sixth parameter: Positive Integer -> Base Network Bandwidth between cloudlets
+		 *  Seventh parameter: 0/1/2 -> Migration policy based on Complete VM/Cold migration (0), Complete Container migration (1), or Container Live Migration (3)
+		 *  Eighth parameter: Non Negative Integer -> User Mobility prediction, in seconds
+		 *  Ninth parameter: Non Negative Integer -> User Mobility prediction inaccuracy, in meters
+		 *  Tenth parameter: Positive negative Integer -> Base Network Latency between cloudlets
+		 */
+		 
+workload?
+
+1. Edit the config.json file in D:\\MobFogSim-master\\MobFogSim-master\\src\\EdgeEPOS\\Setting\\input\\CityConfig.json and sets parameters using C:\Users\znb_n\eclipse-workspace\MapView\geo2cart\7Area
+2. Edit C:\Users\znb_n\eclipse-workspace\MapView\BS\areaconfig.txt
+3. rIFC_Down and FS, FM: ?? should be in Mbit so check the network
+ CloudletPathLentgh include path lenght in meter for edge + core routers: 0 to 112 without cloud
+creates a Cartesian polygon with the area borders
+3. sets constants using initialize method:
+
+**************************Constants******************************
+	1. sets file paths
+	2. initializes the nodes capacity and service demands
+	3. sets dFFC matrix with the delay between all nodes using the path length matrix from MapView, for cloud a random value (MIN_dFC, MAX_dFC) is assigned
+	   for all the nodes the latency is calculated using disToLatFiberFactor = 3.33 (microseconds per km)
+	   
+**************************Network********************************
+4. creates ap (edge_routers) with MIN_ST_IN_AP=500 from Cartesian coordinates in MunichCartSelectedAP.csv
+5. creates ap (back_routers-1) with MIN_ST_IN_AP=0 for core routers from Cartesian coordinates in MunichCartCore.csv
+6. creates cloud with the index back_routers from MunichCartCore.csv
+7. creates cloudlets for every edge router/core router
+8. creates agents for every edge router
+9. creates ServerCloudletsNetwork: builds a full undirectional graph between serverCloudlets using dFFC 
+10. addSmartThing
+11. reads Mobility_Dataset2 for smart mobile thing
+12. initializes VehiclesToAP with the predicted APs in the mobility profiles
+13. Writes vehicle to AP mapping to file AP_Veh.csv
+14. Creates connection between Smart Things and closest Access Points with the delay based on their distance
+15. Creates connection/link between Cloudlets and their co-located Access Points, then between Cloudlets and Smart Things.
+14. createBroker for every smart thing
+15. Prints NetCapacity to file AP_SC.csv
+
+**************************Workload*******************************
+
+Two above programs prepare input data for our main program. Some files of the main program have been added to the rar directory named in_progress_work.
+Sumo simulations downloaded from OSM:
+C:\Users\rooyesh\sumo
+
+
+***********************************************************************************
+5. Trapp 
+
+	installation and run:
+		1. python 2.7 for windows 7 32 bit , sumo
+		2.  add path to scripts folder in python installed folder (for pip):
+			echo %path%
+			set PATH=%PATH%;C:\Python27\Scripts	
+			pip install --upgrade pip
+			pip install setuptools
+			
+		3.  in trapp-master: (H:\project2\TRAPP-master\) 
+							1. python setup.py install or pip install -v .     edit parantheses
+							2. pip install numpy dijkstra matplotlib
+							3. pip upgrade
+						
+		4.  in trapp-master: update three paths in app/Config.py:
+							epos_jar_path
+							sumoConfig
+							sumoNet
+		5.  in trapp-master: update map2/city.sumo.cfg: <output>
+															<fcd-output value="osm.out" />
+														</output>
+		6. python run.py
+			py -2 or -3 script.py
+			py --list
+			py -2.7 or -3.4
+		7. go to C:\Program Files (x86)\Eclipse\Sumo\tools\xml:  python xml2csv.py osm.out2
+		9. to see the output file easier by limiting number of lines to show use the following command in cmd: more /e osm.out2 (or the resulted csv file) p 10
+		FCD-output can be obtained in geo-coordinates by adding the option --fcd-output.geo
+
+********************************************************************************
+
+6. main program: G:\MobFogSim-master\MobFogSim-master\src\EdgeEPOS
+
+Change all other packages in mobfogsim to the original one
+
+At the moment back-routers = core-routers + one cloud node (the last core router) 
+Total resources available: ??? check the units
+			CPU: 515964.00 Memory: 1015759765031.00 Storage: 96400000000000.00
+
+Total resource demands: profile 0,1,2,3 ???
+			CPU: 321.8265760777523 Memory: 265.0 Storage: 576.0
+			
+max veh per ap per timestamp: 119
+********************************************************************************
+
+7. Vehicle mobility:Mobility_Dataset2
+	mobility format for simulation:  	time-stamp (second), angle, x, y, speed
+	fcd-output conforms this format
+
+augmented:
+	time-stamp (second), angle, x, y, speed, id, ap, distanceToAp
+****************************************************************************
+
+
+**************************************************************************
+
+
+Old output files:	H:\\project2\\MyPlots\\1hour-workload
+					D:\project2\MyPlots\1hour-workloadAP\Report
+					E:\sumo-scenarios\FinalResults-10800TS\OsmRouterSumoMobilityPreprocessor
+
+****************************************************************************	
+	
+		/*     
+        * method 2. Edge-aware vehicle routing
+        *  - create two new routers for SUMO (see papers above) that are aware of the baseline and
+        *   optimized quality of service experience on the edge. 
+        *   Compare the performance of the router with and without EPOS traffic optimization. 
+        */
+       
+       	/*
+        * method 1. Mobility-aware service placement on the edge
+        *  - use the optimized routes by EPOS to optimize service placement with EPOS.
+        *   Compare the baseline (edge-ward) and optimized service placement under baseline mobility and optimized mobility
+        */
+              
+		
+		
+I think it is in degrees of latitude which means that the radius value of 1.0 degree corresponds to 111 km. 
+I drew a circle on the map with the radius of 0.01, captured geo-coordinates of the center of the circle and 
+a point on the circumference and the distance came to .69 mile which is 1.11 km. 
+
+sample codes:osmandpcap 
+
+javadoc comment: Alt + shift + j
+
+
+String basePath = new File("").getAbsolutePath();
+	    System.out.println(basePath);
+	    String path = new File("src/main/java/target").getAbsolutePath();
+	    System.out.println(path);
+		
+jdk version: java -version
+javac -version
+
+export jar--> runnable jar --> copy jar files in a side directory
+	
+run configuration:
+	-Xms512M -Xmx1524M
+
+C:\Users\znb_n\eclipse-workspace
+
+Collapse all code blocks: CTRL + SHIFT + NUMPAD_DIVIDE
+
+addresses with space in cmd: use "" around the add
+cd /d 
+
+github: Znbne , znb8450525 
+
+arrivalInstructionsFog[a][j] = L_P[a] * method.traffic.lambda_in[a][j] * x[a][j]
+
+lambda = request/second
+//Collections.sort
+
+getDeviceById
+files to check:
+minmax
+distance
+coordinate
+
+13975 14485
+13694 13792
+13689 13944
